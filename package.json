@@ -1,0 +1,35 @@
+{
+  "name": "nicklachance",
+  "version": "1.0.0",
+  "description": "SavvyCodersPractice",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholasplachance/itdoesntmatter.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "savvycoders"
+  ],
+  "author": "Nick La Chance",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicholasplachance/itdoesntmatter/issues"
+  },
+  "homepage": "https://github.com/nicholasplachance/itdoesntmatter#readme",
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-config-prettier": "^5.2.0"
+  }
+}
