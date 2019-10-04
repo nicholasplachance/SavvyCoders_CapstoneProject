@@ -1,12 +1,12 @@
 /* Everything on page styling */
 :root {
-  --primary: #08605f;
-  --primary-variant: #00072b;
+  --primary: #457b9d;
+  --primary-variant: #e63946;
   --primary-shadow: #111;
-  --secondary: #8a716a;
+  --secondary: #a8dadc;
   --secondary-variant: #566666;
   --secondary-shadow: #fff;
-  --background: #ffe8d1;
+  --background: #f1faee;
   --error: #b00020;
   --primary-text: #fff;
   --secondary-text: #111;
@@ -37,7 +37,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Mukta", sans-serif;
-  background: var(--background);
+  background: -webkit-repeating-linear-gradient(55deg, var(--secondary) 15%, var(--secondary-variant) 30%);
   font-size: 10px;
 }
 
@@ -46,8 +46,8 @@ body {
 header {
   width: 100%;
   margin: 0%;
-  background: -webkit-repeating-linear-gradient(65deg, var(--secondary) 20%, var(--primary-variant) 25%);
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -80,12 +80,13 @@ nav ul {
   list-style-type: none;
 }
 
-nav li a {
+nav li a,
+footer li a {
   font-size: 1.6em;
   padding: var(--base-spacing);
   text-align: center;
-  color: var(--secondary-variant);
-  text-shadow: 1px 1px var(--secondary-shadow);
+  color: var(--primary-text);
+  text-shadow: 1px 1px var(--primary-shadow);
 }
 
 nav .is-hidden--mobile {
@@ -105,7 +106,10 @@ nav .fas {
 /* Hero image style */
 
 .hero-image {
-  background: url(https://picsum.photos/680/420) center center no-repeat;
+  background: url(./images/marvel_dc_stock_image.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 20vh;
   max-height: 420px;
@@ -205,17 +209,10 @@ footer ul {
   display: flex;
   justify-content: space-around;
   padding: var(--base-spacing);
-  font-size: 1.6em;
-}
-
-footer ul li a {
-  color: var(--secondary-variant);
-  text-shadow: 1px 1px var(--secondary-shadow);
 }
 
 footer p {
   text-align: center;
-  font-size: 1.6em;
   color: var(--secondary-variant);
   text-shadow: 1px 1px var(--secondary-shadow);
 }
@@ -259,10 +256,6 @@ footer p {
     min-height: 1em;
     max-height: none;
     font-size: initial;
-  }
-
-  footer ul {
-    font-size: 2.4em;
   }
 }
 
