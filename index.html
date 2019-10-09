@@ -1,61 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Mukta&display=swap" rel="stylesheet">
-  <title>Comic Flicks</title>
-</head>
-<body>
-  <header>
-    <figure><img src="https://picsum.photos/200" alt="A random stock image"></figure>
-    <h1>Comic Flicks</h1>
-  </header>
-  <nav>
-    <span class="fas fa-hamburger is-hidden--desktop"></span>
-    <ul class="is-hidden--mobile show-on--desktop">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Movies</a></li>
-      <li><a href="#">Comics</a></li>
-      <li><a href="#">Recommendations</a></li>
-    </ul>
-  </nav>
-  <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
+    <title>Comic Flicks</title>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img src="https://picsum.photos/200" alt="A random stock image" />
+      </figure>
+      <h1>Comic Flicks</h1>
+    </header>
+    <nav>
+      <span
+        class="fas fa-hamburger is-hidden--desktop"
+        id="hamburger-icon"
+      ></span>
+      <ul class="is-hidden--mobile show-on--desktop">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Comics</a></li>
+        <li><a href="#">Recommendations</a></li>
+      </ul>
+    </nav>
+    <main>
       <div class="hero-image">
-          <span id="fake-cta-button">Welcome to Comic Flicks!</span>
-        </div>
-    <div class="flex-container--mobile flex-container--desktop">
-    <section>
-      <h2 class="sub-header">Movies</h2>
-      <div class="flex-container--mobile---row">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, quibusdam laboriosam, ea autem itaque exercitationem est molestiae commodi doloribus cupiditate, praesentium totam vitae. Quod corrupti, accusantium perferendis explicabo cum maxime?</p>
-      <figure><img src="https://picsum.photos/200" alt="A random stock image"></figure>
-    </div>
-      <a href="#">Read more...</a>
-    </section>
-    <section>
-      <h2 class="sub-header">Comics</h2>
-      <div class="flex-container--mobile">
-      <div class="flex-container--mobile---row">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, quibusdam laboriosam, ea autem itaque exercitationem est molestiae commodi doloribus cupiditate, praesentium totam vitae. Quod corrupti, accusantium perferendis explicabo cum maxime?</p>
-          <figure><img src="https://picsum.photos/200" alt="A random stock image"></figure>
-        </div>
-    </div>
-      <a href="#">Read more...</a>
-    </section>
-    <section>
-      <h2 class="sub-header">Recommendations</h2>
-      <div class="flex-container--mobile---row">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, quibusdam laboriosam, ea autem itaque exercitationem est molestiae commodi doloribus cupiditate, praesentium totam vitae. Quod corrupti, accusantium perferendis explicabo cum maxime?</p>
-      <figure><img src="https://picsum.photos/200" alt="A random stock image"></figure>
-        </div>
-      <a href="#">Read more...</a>
-    </section>
-    </div>
-  </main>
+        <span id="fake-cta-button">Welcome to Comic Flicks!</span>
+      </div>
+      <p class="flex-container--mobile flex-container--desktop">
+        <section>
+          <h2 class="sub-header">Movies</h2>
+          <p class="flex-container--mobile---column">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+              quibusdam laboriosam, ea autem itaque exercitationem est molestiae
+              commodi doloribus cupiditate, praesentium totam vitae. Quod
+              corrupti, accusantium perferendis explicabo cum maxime?
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
+              amet ab dolores similique, suscipit illum ipsam deleniti quis
+              incidunt impedit recusandae ratione blanditiis dolore voluptatum,
+              maiores eaque architecto dolor ut!
+            </p>
+            <div class="flex-container--mobile---row">
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+            </div>
+          </p>
+          <a href="#" id="read-more">Read more...</a>
+        </section>
+        <section>
+          <h2 class="sub-header">Comics</h2>
+          <div class="flex-container--mobile---column">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+              quibusdam laboriosam, ea autem itaque exercitationem est molestiae
+              commodi doloribus cupiditate, praesentium totam vitae. Quod
+              corrupti, accusantium perferendis explicabo cum maxime?
+            </p>
+            <div class="flex-container--mobile---row">
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+            </div>
+          </div>
+          <a href="#" id="read-more">Read more...</a>
+        </section>
+        <section>
+          <h2 class="sub-header">Recommendations</h2>
+          <div class="flex-container--mobile---column">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+              quibusdam laboriosam, ea autem itaque exercitationem est molestiae
+              commodi doloribus cupiditate, praesentium totam vitae. Quod
+              corrupti, accusantium perferendis explicabo cum maxime?
+            </p>
+            <div class="flex-container--mobile---row">
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+              <img src="https://picsum.photos/200" alt="A random stock image" />
+            </div>
+          </div>
+          <a href="#" id="read-more" >Read more...</a>
+        </section>
+      </p>
+    </main>
     <footer>
       <ul>
         <li><a href="#">Home</a></li>
@@ -64,6 +106,6 @@
         <li><a href="#">Recommendations</a></li>
       </ul>
     </footer>
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

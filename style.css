@@ -82,26 +82,53 @@ nav ul {
 
 nav li a,
 footer li a {
-  font-size: 1.6em;
+  text-decoration: none;
+  font-size: 2em;
   padding: var(--base-spacing);
   text-align: center;
-  color: var(--primary-text);
-  text-shadow: 1px 1px var(--primary-shadow);
+  color: var(--secondary-variant);
+  text-shadow: 1px 1px var(--secondary-shadow);
+}
+
+nav ul {
+  height: 20vh;
+  margin: 0;
+  padding: calc(var(--base-spacing) * 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--base-spacing);
+  border-bottom: calc(var(--base-spacing) / 2) solid var(--primary-shadow);
+  background: var(--background);
+  transition: ease 0.75s;
+}
+
+nav li a:hover,
+footer li a:hover {
+  font-size: 2.1em;
+  font-weight: 800;
 }
 
 nav .is-hidden--mobile {
-  margin: 0;
   height: 0;
+  margin: 0;
   opacity: 0;
+  z-index: -1;
 }
 
 nav .fas {
-  font-size: 4.8em;
+  font-size: 4.5em;
   position: absolute;
   margin: var(--base-spacing);
   transform: translateX(calc(100vw - (var(--base-spacing) * 10)));
+  z-index: 2;
 }
 
+nav .fas:hover {
+  cursor: pointer;
+  color: #ddd;
+  font-size: 4.8em;
+}
 
 /* Hero image style */
 
@@ -155,6 +182,12 @@ main {
 .flex-container--mobile---row {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-container--mobile---column {
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -192,16 +225,23 @@ section a:hover {
 
 section p {
   text-align: center;
-  width: 75%;
   line-height: 1.6em;
   padding: (var(--base-spacing) * 1.75);
   font-size: 1.6em;
+  display: inline-block;
+}
+
+section img {
+  height: 160px;
+  width: 260px;
+  margin: calc(var(--base-spacing) * 1);
 }
 
 /* Footer style */
 
 footer {
   border-top: calc(var(--base-spacing) / 2) solid var(--primary-shadow);
+  background: var(--background);
 }
 
 footer ul {
@@ -209,12 +249,6 @@ footer ul {
   display: flex;
   justify-content: space-around;
   padding: var(--base-spacing);
-}
-
-footer p {
-  text-align: center;
-  color: var(--secondary-variant);
-  text-shadow: 1px 1px var(--secondary-shadow);
 }
 
 
