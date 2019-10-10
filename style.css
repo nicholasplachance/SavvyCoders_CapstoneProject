@@ -191,7 +191,8 @@ main {
 }
 
 section {
-  margin: var(--base-spacing) calc(var(--base-spacing) / 2);
+  margin: calc(var(--base-spacing) / 2);
+  padding: calc(var(--base-spacing) * 2);
   width: calc(100% - calc(var(--base-spacing) * 2));
   background: var(--primary);
   color: var(--primary-text);
@@ -232,8 +233,10 @@ section p {
 }
 
 section img {
-  height: 160px;
-  width: 260px;
+  min-height: 10vh;
+  max-height: 20vh;
+  min-width: 5vw;
+  max-width: 7.5vw;
   margin: calc(var(--base-spacing) * 1);
 }
 
@@ -259,7 +262,6 @@ footer ul {
 @media screen and (min-width: 768px) {
   section {
     width: calc(100% - var(--base-spacing));
-    margin: var(--base-spacing) 0;
     flex-direction: column;
   }
 
