@@ -1,23 +1,24 @@
 /* Everything on page styling */
 :root {
-  --primary: #08605f;
-  --primary-variant: #00072b;
+  --primary: #457b9d;
+  --primary-variant: #e63946;
   --primary-shadow: #111;
-  --secondary: #8a716a;
+  --secondary: #a8dadc;
   --secondary-variant: #566666;
   --secondary-shadow: #fff;
-  --background: #ffe8d1;
+  --background: #f1faee;
   --error: #b00020;
   --primary-text: #fff;
   --secondary-text: #111;
   --base-spacing: 8px;
 }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Global styling */
@@ -36,11 +37,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Mukta", sans-serif;
-  background: -webkit-repeating-linear-gradient(
-    55deg,
-    var(--secondary) 15%,
-    var(--secondary-variant) 30%
-  );
+  background: -webkit-repeating-linear-gradient(55deg, var(--secondary) 15%, var(--secondary-variant) 30%);
   font-size: 10px;
 }
 
@@ -49,8 +46,8 @@ body {
 header {
   width: 100%;
   margin: 0%;
-  background: -webkit-repeating-linear-gradient(65deg, var(--secondary) 20%, var(--primary-variant) 25%);
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -136,7 +133,10 @@ nav .fas:hover {
 /* Hero image style */
 
 .hero-image {
-  background: url(https://picsum.photos/680/420) center center no-repeat;
+  background: url(./images/marvel_dc_stock_image.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 20vh;
   max-height: 420px;
@@ -151,6 +151,10 @@ nav .fas:hover {
   font-size: 2.4em;
   padding: var(--base-spacing);
   border-radius: var(--base-spacing);
+}
+
+.hero-image span:hover {
+  background-color: var(--secondary-variant);
 }
 
 /* Main styling */
@@ -171,7 +175,7 @@ main {
   color: var(--primary-text);
   font-size: 2.4em;
   line-height: calc(var(--base-spacing) * 4);
-  text-shadow: 2px 2px var(--primary-shadow);
+  text-shadow: 1px 1px var(--primary-shadow);
   box-shadow: 1px 1px var(--secondary-shadow);
 }
 
@@ -228,8 +232,8 @@ section p {
 }
 
 section img {
-  height: 20vh;
-  width: 25vw;
+  height: 160px;
+  width: 260px;
   margin: calc(var(--base-spacing) * 1);
 }
 
@@ -245,35 +249,14 @@ footer ul {
   display: flex;
   justify-content: space-around;
   padding: var(--base-spacing);
-  font-size: 1.6em;
 }
 
-footer ul li a {
-  color: var(--secondary-variant);
-  text-shadow: 1px 1px var(--secondary-shadow);
-}
 
-footer p {
-  text-align: center;
-  font-size: 1.6em;
-  color: var(--secondary-variant);
-  text-shadow: 1px 1px var(--secondary-shadow);
-  padding: var(--base-spacing);
-}
 
 /* Media queries */
 
 /* Tablet view */
 @media screen and (min-width: 768px) {
-  header {
-    flex-direction: row;
-    padding: calc(var(--base-spacing) * 2);
-  }
-
-  header figure {
-    margin-left: calc(var(--base-spacing)) * 0.5;
-  }
-
   section {
     width: calc(100% - var(--base-spacing));
     margin: var(--base-spacing) 0;
@@ -308,15 +291,22 @@ footer p {
     max-height: none;
     font-size: initial;
   }
-
-  footer ul {
-    font-size: 2.4em;
-  }
 }
 
 /* Desktop view */
 @media screen and (min-width: 1068px) {
+
   /* Header */
+
+  header {
+    flex-direction: row;
+    padding: calc(var(--base-spacing) * 2);
+  }
+
+  header figure {
+    margin-left: calc(var(--base-spacing)) * .5;
+  }
+
 
   /* Navigation */
 
@@ -342,6 +332,7 @@ footer p {
     height: auto;
     min-height: 1em;
     max-height: none;
+    font-size: initial;
   }
 
   /* Contact Page */
