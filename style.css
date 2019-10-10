@@ -62,7 +62,7 @@ header > figure > img {
 
 header > h1 {
   color: var(--primary-text);
-  font-size: 2.8em;
+  font-size: 4em;
   line-height: 50px;
   text-shadow: 2px 1.5px var(--primary-shadow);
   text-align: center;
@@ -175,7 +175,7 @@ main {
   color: var(--primary-text);
   font-size: 2.4em;
   line-height: calc(var(--base-spacing) * 4);
-  text-shadow: 1px 1px var(--primary-shadow);
+  text-shadow: 2px 2px var(--primary-shadow);
   box-shadow: 1px 1px var(--secondary-shadow);
 }
 
@@ -254,7 +254,13 @@ footer ul {
   padding: var(--base-spacing);
 }
 
-
+footer p {
+  text-align: center;
+  font-size: 1.6em;
+  color: var(--secondary-variant);
+  text-shadow: 1px 1px var(--secondary-shadow);
+  padding: var(--base-spacing);
+}
 
 /* Media queries */
 
