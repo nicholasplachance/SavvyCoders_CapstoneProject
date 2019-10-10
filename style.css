@@ -87,7 +87,7 @@ footer li a {
   padding: var(--base-spacing);
   text-align: center;
   color: var(--secondary-variant);
-  text-shadow: 1px 1px var(--secondary-shadow);
+  text-shadow: 1px 1px var(--primary-shadow);
 }
 
 nav ul {
@@ -205,19 +205,20 @@ section {
   border-radius: var(--base-spacing);
 }
 
-section a {
+.read-more {
   width: 30%;
   margin: var(--base-spacing);
   padding: var(--base-spacing);
   color: var(--primary-text);
-  text-shadow: 1px 1px var(--primary-shadow);
+  text-shadow: 1.5px 1.5px var(--primary-shadow);
   background-color: var(--secondary);
   font-size: 1.6em;
   border-radius: var(--base-spacing);
   box-shadow: 1px 1px var(--secondary-shadow);
+  text-decoration: none;
 }
 
-section a:hover {
+.read-more:hover {
   cursor: pointer;
   color: var(--primary-text);
   text-shadow: 1px 1px var(--primary-shadow);
