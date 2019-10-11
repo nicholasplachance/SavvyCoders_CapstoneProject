@@ -234,10 +234,8 @@ section p {
 }
 
 section img {
-  min-height: 10vh;
-  max-height: 20vh;
-  min-width: 5vw;
-  max-width: 7.5vw;
+  height: 20vh;
+  width: 15vw;
   margin: calc(var(--base-spacing) * 1);
 }
 
@@ -342,6 +340,12 @@ footer p {
     min-height: 1em;
     max-height: none;
     font-size: initial;
+  }
+
+  section img {
+    height: 12.5vh;
+    width: 7.5vw;
+    margin: calc(var(--base-spacing) * 1);
   }
 
   /* Contact Page */
