@@ -183,12 +183,14 @@ main {
   flex-direction: column;
   align-content: center;
   align-items: center;
+
 }
 
 .flex-container--mobile---row {
   display: flex;
   align-items: center;
   align-content: center;
+  justify-content: center;
 }
 
 section {
@@ -243,7 +245,7 @@ section img {
 
 .card-container {
   width: 100%;
-  margin: var(--base-spacing);
+  margin: var(--base-spacing) 0;
   border: 3px solid var(--primary-shadow);
   border-radius: 2.5%;
   box-shadow: 2px 2px 1px var(--secondary);
@@ -252,7 +254,7 @@ section img {
 .card-labels {
   color: var(--background);
   text-shadow: 2px 2px var(--primary-shadow);
-  width: 60%;
+  width: 100%;
   line-height: 3.5em;
   text-align: center;
   margin: calc(var(--base-spacing) / 2);
@@ -294,6 +296,13 @@ footer p {
 @media screen and (min-width: 768px) {
   section {
     flex-direction: column;
+  }
+
+  .flex-container--desktop---row {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
   }
 
   .hero-image {
@@ -354,6 +363,7 @@ footer p {
   }
 
 
+
   /* Navigation */
 
   nav {
@@ -394,13 +404,6 @@ footer p {
 
   .flex-direction--row {
     flex-direction: row;
-  }
-
-  .flex-container--desktop---row {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: flex-end;
   }
 
 }
