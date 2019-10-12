@@ -251,8 +251,9 @@ section img {
 }
 
 .card-labels {
+  width: 80%;
+  line-height: 3.5em;
   text-align: center;
-  width: 100%;
   margin: calc(var(--base-spacing) / 2);
 }
 
