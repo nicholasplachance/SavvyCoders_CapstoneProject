@@ -83,7 +83,7 @@ nav ul {
 nav li a,
 footer li a {
   text-decoration: none;
-  font-size: 2.75em;
+  font-size: 1.6em;
   padding: var(--base-spacing);
   text-align: center;
   color: var(--secondary-variant);
@@ -104,7 +104,7 @@ nav ul {
 
 nav li a:hover,
 footer li a:hover {
-  font-size: 2.1em;
+  font-size: 1.75em;
   font-weight: 800;
 }
 
@@ -179,18 +179,18 @@ main {
   box-shadow: 1px 1px var(--secondary-shadow);
 }
 
-.flex-container--mobile---row {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: flex-end;
-}
-
 .flex-container--mobile---column {
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
+}
+
+.flex-container--mobile---row {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
 }
 
 section {
@@ -399,5 +399,11 @@ footer p {
     flex-direction: row;
   }
 
+  .flex-container--desktop---row {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+  }
 
 }
