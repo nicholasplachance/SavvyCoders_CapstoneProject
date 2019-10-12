@@ -57,7 +57,7 @@ let url;
 superHeroMovieIds.forEach(element => {
   console.log(element.movieId);
   movie = element.movieId;
-  url = `http://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
+  url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
   fetch(url) // Call the fetch function passing the url of the API as a parameter
   .then(response => {
     return response.json();
