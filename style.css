@@ -159,7 +159,6 @@ nav .fas:hover {
 /* Main styling */
 
 main {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,7 +189,6 @@ main {
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: flex-end;
 }
 
 section {
@@ -237,13 +235,14 @@ section p {
 }
 
 section img {
-  height: 25vh;
-  width: 20vw;
+  height: 30vh;
+  width: auto;
+  image-rendering: optimizeQuality;
   margin: calc(var(--base-spacing) * 1);
 }
 
 .card-container {
-  width: 90%;
+  width: 100%;
   margin: var(--base-spacing);
   border: 3px solid var(--primary-shadow);
   border-radius: 2.5%;
@@ -251,18 +250,21 @@ section img {
 }
 
 .card-labels {
-  width: 80%;
+  color: var(--background);
+  text-shadow: 2px 2px var(--primary-shadow);
+  width: 60%;
   line-height: 3.5em;
   text-align: center;
   margin: calc(var(--base-spacing) / 2);
 }
 
 .card-labels h3 {
-  font-size: 2.8em;
+  font-size: 2.4em;
+  text-decoration: underline;
 }
 
 .card-labels h4 {
-  font-size: 2.4em;
+  font-size: 1.8em;
 }
 
 /* Footer style */
@@ -291,7 +293,6 @@ footer p {
 /* Tablet view */
 @media screen and (min-width: 768px) {
   section {
-    width: calc(100vw - var(--base-spacing));
     flex-direction: column;
   }
 
@@ -346,8 +347,10 @@ footer p {
     margin-left: calc(var(--base-spacing)) * .5;
   }
 
-  .card-container {
+  section img {
     height: 25vh;
+    width: auto;
+    margin: calc(var(--base-spacing) * 1);
   }
 
 
@@ -383,12 +386,6 @@ footer p {
     margin: calc(var(--base-spacing) / 2);
     width: calc(100% - calc(var(--base-spacing) / 2));
     flex-direction: column;
-  }
-
-  section img {
-    height: 21vh;
-    width: 16vw;
-    margin: calc(var(--base-spacing) * 1);
   }
 
   .flex-container--desktop {
