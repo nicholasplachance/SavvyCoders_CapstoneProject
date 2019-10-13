@@ -17,7 +17,19 @@ const superHeroMovieIds = [
   { movieName: "Captain America: The Winter Soldier", movieId: "tt1843866"},
   { movieName: "Guardians of the Galaxy", movieId: "tt2015381"},
   { movieName: "Avengers: Age of Ultron", movieId: "tt2395427"},
-  { movieName: "Ant-Man", movieId: "tt0478970"}
+  { movieName: "Ant-Man", movieId: "tt0478970"},
+  { movieName: "Captain America: Civil War", movieId: "tt3498820"},
+  { movieName: "Doctor Strange", movieId: "tt1211837"},
+  { movieName: "Guardians of the Galaxy Vol. 2", movieId: "tt3896198"},
+  { movieName: "Spider-Man: Homecoming", movieId: "tt2250912"},
+  { movieName: "Thor: Ragnarok", movieId: "tt3501632"},
+  { movieName: "Black Panther", movieId: "tt1825683"},
+  { movieName: "Avengers: Infinity War", movieId: "tt4154756"},
+  { movieName: "Ant-Man and the Wasp", movieId: "tt5095030"},
+  { movieName: "Captain Marvel", movieId: "tt4154664"},
+  { movieName: "Avengers: Endgame", movieId: "tt4154796"},
+  { movieName: "Spider-Man: Far from Home", movieId: "tt6320628"}
+
 ];
 
 const movieCard = document.querySelectorAll(".card-container");
@@ -27,6 +39,7 @@ const movieCardTitle = document.querySelectorAll(".movie-title");
 const movieCardActors = document.querySelectorAll(".movie-actors");
 const movieCardYear = document.querySelectorAll(".movie-release--year");
 const movieCardContainer = document.querySelector(".movie-card--container");
+const randomMoviePoster = document.querySelectorAll(".random-movie--image");
 
 // const apiKey = `31152d26`;
 // let url;
@@ -54,8 +67,9 @@ let movie;
 const apiKey = `31152d26`;
 let url;
 
+
+
 superHeroMovieIds.forEach(element => {
-  console.log(element.movieId);
   movie = element.movieId;
   url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
   fetch(url) // Call the fetch function passing the url of the API as a parameter
@@ -67,6 +81,7 @@ superHeroMovieIds.forEach(element => {
     // console.log(data);
     // console.log(data.Actors);
     // console.log(data.Title);
+
 
     movieCardContainer.innerHTML += `<div class="flex-container--mobile---row card-container">
     <div class="flex-container--mobile---column card-labels">
@@ -80,7 +95,29 @@ superHeroMovieIds.forEach(element => {
     </div>
   </div>
     `
-
-    console.log(movieCardContainer);
   });
 });
+
+
+
+
+superHeroMovieIds.forEach(element => {
+  movie = element.movieId;
+  url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
+  fetch(url) // Call the fetch function passing the url of the API as a parameter
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    // Work with JSON data here
+    // console.log(data);
+    // console.log(data.Actors);
+    // console.log(data.Title);
+
+
+    randomMoviePoster[0].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
+    randomMoviePoster[1].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
+    randomMoviePoster[2].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
+  });
+});
+
