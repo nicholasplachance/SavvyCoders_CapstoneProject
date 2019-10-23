@@ -1,10 +1,11 @@
 {
   "name": "nicklachance",
   "version": "1.0.0",
-  "description": "SavvyCodersPractice",
+  "description": "SavvyCodersCapstone",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "parcel index.html",
+    "build": "parcel build index.html && cp _redirects ./dist/"
   },
   "repository": {
     "type": "git",
@@ -26,14 +27,23 @@
     "eslint": "^6.2.2",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "http-server": "^0.11.1",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-prettier": "^1.1.1",
-    "http-server": "0.8.1",
-    "stylelint-config-prettier": "^5.2.0"
+    "stylelint-prettier": "^1.1.1"
   },
   "dependencies": {
-    "axios": "^0.19.0"
+    "@firebase/app": "^0.4.20",
+    "@firebase/auth": "^0.12.2",
+    "@firebase/firestore": "^1.6.2",
+    "app": "^0.1.0",
+    "axios": "^0.19.0",
+    "firebase": "^7.2.1",
+    "live-server": "^1.2.1",
+    "lodash": "^4.17.15",
+    "navigo": "^7.1.2"
   }
 }
