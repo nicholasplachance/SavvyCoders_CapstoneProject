@@ -44,9 +44,6 @@ const justiceLeague = superHeroMovieIds.filter(movie => movie.moviePublisher ===
 
 const avengers = superHeroMovieIds.filter(movie => movie.moviePublisher === "marvel").map(movie => movie);
 
-console.log(justiceLeague);
-console.log(avengers)
-
 const movieCard = document.querySelectorAll(".card-container");
 const movieCardText = document.querySelectorAll(".card-labels");
 const movieCardImages = document.querySelectorAll(".card-images");
@@ -84,6 +81,36 @@ const apiKey = `31152d26`;
 let url;
 
 
+justiceLeague.map(element => {
+  movie = element.movieId;
+  url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
+  fetch(url) // Call the fetch function passing the url of the API as a parameter
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    // Work with JSON data here
+    // console.log(data.Actors);
+    // console.log(data.Title);
+
+
+    dcMovieCardContainer.innerHTML += `<div class="flex-container--mobile---row card-container">
+    <div class="flex-container--mobile---column card-labels">
+        <h3 class="movie-title">${data.Title}</h3>
+        <h4 class="movie-release--year">${data.Director} | ${data.Year}</h4>
+        <h4 class="movie-actors">${data.Actors}</h4>
+        <h4>${data.Rated}</h4>
+        <p class="movie-plot">${data.Plot}</p>
+      <a href="#" class="read-more">Read more...</a>
+    </div>
+    <div class="flex-container--mobile---row card-images">
+      <img src="${data.Poster}" alt="">
+    </div>
+  </div>
+    `
+  });
+});
+
 
 avengers.map(element => {
   movie = element.movieId;
@@ -94,7 +121,6 @@ avengers.map(element => {
   })
   .then(data => {
     // Work with JSON data here
-    console.log(data);
     // console.log(data.Actors);
     // console.log(data.Title);
 
@@ -102,37 +128,10 @@ avengers.map(element => {
     marvelMovieCardContainer.innerHTML += `<div class="flex-container--mobile---row card-container">
     <div class="flex-container--mobile---column card-labels">
         <h3 class="movie-title">${data.Title}</h3>
-        <h4 class="movie-release--year">${data.Director} ${data.Year}</h4>
+        <h4 class="movie-release--year">${data.Director} | ${data.Year}</h4>
         <h4 class="movie-actors">${data.Actors}</h4>
-      <a href="#" class="read-more">Read more...</a>
-    </div>
-    <div class="flex-container--mobile---row card-images">
-      <img src="${data.Poster}" alt="">
-    </div>
-  </div>
-    `
-  });
-});
-
-justiceLeague.map(element => {
-  movie = element.movieId;
-  url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
-  fetch(url) // Call the fetch function passing the url of the API as a parameter
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    // Work with JSON data here
-    console.log(data);
-    // console.log(data.Actors);
-    // console.log(data.Title);
-
-
-    dcMovieCardContainer.innerHTML += `<div class="flex-container--mobile---row card-container">
-    <div class="flex-container--mobile---column card-labels">
-        <h3 class="movie-title">${data.Title}</h3>
-        <h4 class="movie-release--year">${data.Director} ${data.Year}</h4>
-        <h4 class="movie-actors">${data.Actors}</h4>
+        <h4>${data.Rated}</h4>
+        <p class="movie-plot">${data.Plot}</p>
       <a href="#" class="read-more">Read more...</a>
     </div>
     <div class="flex-container--mobile---row card-images">
@@ -146,7 +145,8 @@ justiceLeague.map(element => {
 
 
 
-superHeroMovieIds.forEach(element => {
+
+superHeroMovieIds.map( element => {
   movie = element.movieId;
   url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
   fetch(url) // Call the fetch function passing the url of the API as a parameter
@@ -159,10 +159,37 @@ superHeroMovieIds.forEach(element => {
     // console.log(data.Actors);
     // console.log(data.Title);
 
-
     randomMoviePoster[0].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
-    randomMoviePoster[1].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
-    randomMoviePoster[2].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
-  });
-});
+})})
 
+superHeroMovieIds.map( element => {
+  movie = element.movieId;
+  url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
+  fetch(url) // Call the fetch function passing the url of the API as a parameter
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    // Work with JSON data here
+    // console.log(data);
+    // console.log(data.Actors);
+    // console.log(data.Title);
+
+    randomMoviePoster[1].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
+})})
+
+superHeroMovieIds.map( element => {
+  movie = element.movieId;
+  url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
+  fetch(url) // Call the fetch function passing the url of the API as a parameter
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    // Work with JSON data here
+    // console.log(data);
+    // console.log(data.Actors);
+    // console.log(data.Title);
+
+    randomMoviePoster[2].innerHTML = `<img src="${data.Poster}" alt="${data.Title} poster">`;
+})})
