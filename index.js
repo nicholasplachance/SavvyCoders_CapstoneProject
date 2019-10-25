@@ -1,6 +1,5 @@
 // index.js file inside ROOT DIRECTORY
 
-
 // Object destructing, it replaces dot-notation, and pulls specifically
 import { Header, Navigation, Main, Footer } from "./components";
 
@@ -9,13 +8,13 @@ import * as state from "./store";
 
 // Import node module: navigo
 import Navigo from "navigo";
-import axios from "axios"
-import { capitalize } from "lodash"
-
+import axios from "axios";
+import { capitalize } from "lodash";
 
 // Import firebase db
-import { auth, db } from "./firebase"
+import { auth, db } from "./firebase";
 import { database } from "firebase";
+import { chown } from "fs";
 
 // console.log(auth);
 
@@ -23,7 +22,6 @@ import { database } from "firebase";
 
 // TODO create a firebase db fetch to retrieve imdb ids for api fetch request
 // TODO create a api fetch request to pull data for movies
-
 
 // axios
 //   .get("https://jsonplaceholder.typicode.com/posts")
@@ -42,20 +40,16 @@ import { database } from "firebase";
 
 //   });
 
-
 // The uppercase "N" for "Navigo" represents that it is a constructor function
 
 const router = new Navigo(location.origin);
 // console.log(Navigo);
 // console.log(router);
 
-
-
 // console.log(state);
 
 // Use state to render the appropriate heading, depending on the 'state' of the app
 // What page is currently selected or being currently displayed
-
 
 // import Header from "./components/Header.js";
 // import Nav from "./components/Navigation.js";
@@ -63,170 +57,84 @@ const router = new Navigo(location.origin);
 // import Footer from "./components/Footer.js";
 
 function renderState(st = state.Home) {
-  (document.querySelector("#root").innerHTML = `
+  document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Navigation()}
   ${Main(st)}
   ${Footer()}
-`);
+`;
   router.updatePageLinks();
-
 }
 
 router
   // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
-  .on(":page", params =>
-    renderState(state[capitalize(params.page)])
-  )
+  .on(":page", params => renderState(state[capitalize(params.page)]))
   .on("/", () => renderState())
   // TODO - Create a 404 page and route all bad routes to that page
   .resolve();
 // console.log(window.location.pathname)
 // console.log(location.pathname.slice(1));
 
+// const query = db.ref("data/0/movies");
 
-const query = db.ref("0/movies");
+// const movies = query.once("value")
+//   .then(snap => {
+//   let data = snap.child("0/movieId").val()
+//   console.log(data)
+//   return data
+// });
 
-const movies = query.once("value")
-  .then(snap => {
-  let data = snap.child("0/movieId").val()
-  console.log(data)
-  return data
-});
+const apiKey = `31152d26`;
 
-console.log(movies)
-
-
-
-
-
-// Gallery
-// db.collection("pictures")
-//   .get()
-//   .then(querySnapshots => {
-
-//     // Let's make sure to update instead of overwriting our markup
-//     state.Gallery.main +=
-//       `<div class="gallery">` +
-//       querySnapshots.docs
-//         .map(doc => {
-//           // Combine `const` with destructuring to create 3 variables from the keys in our object literal
-//           const { caption, credit, imgURL } = doc.data();
-
-//           return `
-//         <figure>
-//           <img src="${imgURL}" alt="">
-//           <figcaption>${caption} - ${credit}</figcaption>
-//         </figure>
-//       `;
-//         })
-//         .join(" ") +
-//       `</div>`;
-
-//     if (
-//       router.lastRouteResolved().params &&
-//       capitalize(router.lastRouteResolved().params.page) === "Gallery"
-//     ) {
-//       renderState(state.Gallery);
-
-//       const imgURL = document.querySelector("#imgURL");
-//       const caption = document.querySelector("#caption");
-//       const credit = document.querySelector("#credit");
-
-//       document.querySelector("form").addEventListener("submit", e => {
-//         e.preventDefault();
-
-//         db.collection("pictures")
-//           .add({
-//             imgURL: imgURL.value,
-//             caption: caption.value,
-//             credit: credit.value
-//           })
-//           .then(function(docRef) {
-//             console.log("Document written with ID: ", docRef.id);
-//           })
-//           .catch(function(error) {
-//             console.error("Error adding document: ", error);
-//           });
-//       });
-//     }
-//   })
-//   .catch(err => console.error("Error loading pics", err));
-
-
-
-// Admin
-
-// TODO: Rather than grabbing each element manually, consider using (`event.target.elements`) on the `submit` event.
-// Are we on Admin page?
-if (
-  router.lastRouteResolved().params &&
-  capitalize(router.lastRouteResolved().params.page) === "Admin"
-) {
-  // Are we logged in?
-  auth.onAuthStateChanged(user => {
-    console.log(user);
-    if (user) {
-      // We are logged in!
-      console.log("you are logged in!");
-      state.Admin.main = `<div class="hero-image">
-      </div><button type="button">Log out!</button>`;
-
-      renderState(state.Admin);
-
-      document.querySelector("button").addEventListener("click", () => {
-        auth
-          .signOut()
-          .then(() => {
-            state.Admin.main = `
-            <div class="hero-image">
-          </div>
-          <div class="flex-container--desktop flex-direction--row"></div>
-              <form>
-                <div class="inputarea">
-                <label for="name">User Name:</label>
-                  <input type="email" />
-                </div>
-                <div class="inputarea">
-                <label for="email">Password:</label>
-                  <input type="password" />
-                </div>
-                <input id="login" type="submit" value="Log in!" />
-              </form>
-            `;
-
-          renderState(state.Admin);
-          })
-          .catch(err => console.log("Error signing out", err.message));
-      });
-    } else {
-      const email = document.querySelector('[type="email"]');
-      const password = document.querySelector('[type="password"]');
-
-      document.querySelector("form").addEventListener("submit", e => {
-        e.preventDefault();
-
-        auth
-          .signInWithEmailAndPassword(email.value, password.value)
-          .catch(err => console.error("Got an error", err.message));
-      });
+const query = db.ref("data/0/movies").orderByKey();
+query.once("value").then(function(snapshot) {
+  console.log(snapshot);
+  snapshot.forEach(function(childSnapshot) {
+    // key will be "ada" the first time and "alan" the second time
+    const key = childSnapshot.key;
+    // console.log(key);
+    // childData will be the actual contents of the child
+    const childData = childSnapshot.val();
+    console.log(childData.moviePublisher)
+    // console.log(childData);
+    let movie = childData.movieId
+    if ( childData.moviePublisher === "dc") {
+      console.log(childData)
     }
+    let url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
+    axios
+      .get(url)
+      .then(response => {
+        // TODO: Using response.data[0]
+        // console.log(response.data)
+        return response.data;
+      })
+      .then(data => {
+        state.Movies.main += `<section><div class="dc-movie--card---container">
+              <h2 class="sub-header">${capitalize(childData.moviePublisher)} Movie</h2>
+        <div class="flex-container--mobile---row card-container">
+    <div class="flex-container--mobile---column card-labels">
+        <h3 class="movie-title">${data.Title}</h3>
+        <h4 class="movie-release--year">${data.Director} | ${data.Year}</h4>
+        <h4 class="movie-actors">${data.Actors}</h4>
+        <h4>${data.Rated}</h4>
+        <p class="movie-plot">${data.Plot}</p>
+      <a href="#" class="read-more">Read more...</a>
+    </div>
+    <div class="flex-container--mobile---row card-images">
+      <img class="movie-poster" src="${data.Poster}" alt="">
+    </div>
+  </div>
+  </div>
+  </section>
+    `
+    // state.Movies.main = dcMovieCardContainer.innerHTML;
+        if (
+          router.lastRouteResolved().params &&
+          capitalize(router.lastRouteResolved().params.page) === "Movies"
+        ) {
+          renderState(state.Movies);
+        }
+      });
   });
-}
-
-
-
-
-// Test pulling information from firebase database
-
-
-// db.collection("superheroMovies")
-//   .get()
-//   .then(querySnapshots => {
-//     querySnapshots.docs
-//       .map(doc => {
-//         const { moviePublisher, movieTitle, imdbID } = doc.data();
-
-//         console.log(moviePublisher, movieTitle, imdbID)
-//       })
-//   })
+});

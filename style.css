@@ -240,7 +240,7 @@ section p {
   display: inline-block;
 }
 
-section img {
+.movie-poster {
   height: 30vh;
   width: auto;
   margin: calc(var(--base-spacing) * 1);
@@ -248,7 +248,7 @@ section img {
 }
 
 .card-container {
-  width: 75vw;
+  width: 90vw;
   margin: var(--base-spacing) 0;
   border: 2.5px solid var(--primary-shadow);
   border-radius: 2.5%;
@@ -257,6 +257,8 @@ section img {
 }
 
 .card-labels {
+  color: var(--primary-text);
+  text-shadow: px 1.5px var(--primary-shadow);
   text-shadow: 1.5px 1px var(--primary-shadow);
   width: 100%;
   line-height: 3.25em;
