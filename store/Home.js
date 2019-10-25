@@ -6,7 +6,7 @@ export default {
   <section>
     <h2 class="sub-header">Movies</h2>
     <div class="card-container">
-      <div class="flex-container--mobile---column card-labels">
+      <div class="flex-container--mobile---column">
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
           amet ab dolores similique, suscipit illum ipsam deleniti quis
@@ -25,7 +25,7 @@ export default {
   <section>
     <h2 class="sub-header">Comics</h2>
     <div class="card-container">
-      <div class="flex-container--mobile---column card-labels">
+      <div class="flex-container--mobile---column">
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
           amet ab dolores similique, suscipit illum ipsam deleniti quis
@@ -45,7 +45,7 @@ export default {
   <section>
     <h2 class="sub-header">Recommendations</h2>
     <div class="card-container">
-      <div class="flex-container--mobile---column card-labels">
+      <div class="flex-container--mobile---column">
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
           amet ab dolores similique, suscipit illum ipsam deleniti quis

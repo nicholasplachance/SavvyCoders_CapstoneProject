@@ -1,5 +1,5 @@
 export default {
-  heading: "Contact Page",
+  heading: "Comics Page",
   main: `<div class="hero-image">
   </div>
   <div class="flex-container--desktop flex-direction--row">

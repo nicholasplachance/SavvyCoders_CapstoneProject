@@ -1,5 +1,5 @@
 export default {
-  heading: "Blog Page",
+  heading: "Recommendation Page",
   main: `<div class="hero-image">
   </div>
   <div class="flex-container--desktop flex-direction--row">

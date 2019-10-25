@@ -16,26 +16,30 @@ import { capitalize } from "lodash"
 // Import firebase db
 import { auth, db } from "./firebase"
 
-console.log(auth);
+// console.log(auth);
 
-console.log(db)
+// console.log(db)
 
-axios
-  .get("https://jsonplaceholder.typicode.com/posts")
-  .then(response => {
-    // TODO: Using response.data[0]
-    state.Blog.main += response.data.map(({title, body})=>
-      `<article>
-      <h2 class="sub-header">${title}</h2>
-      <p>${body}</p>
-      </article>`
-  ).join("")
+// TODO create a firebase db fetch to retrieve imdb ids for api fetch request
+// TODO create a api fetch request to pull data for movies
 
-  if ( router.lastRouteResolved().params && capitalize(router.lastRouteResolved().params.page) === "Blog") {
-    renderState(state.Blog)
-  }
 
-  });
+// axios
+//   .get("https://jsonplaceholder.typicode.com/posts")
+//   .then(response => {
+//     // TODO: Using response.data[0]
+//     state.Blog.main += response.data.map(({title, body})=>
+//       `<article>
+//       <h2 class="sub-header">${title}</h2>
+//       <p>${body}</p>
+//       </article>`
+//   ).join("")
+
+//   if ( router.lastRouteResolved().params && capitalize(router.lastRouteResolved().params.page) === "Blog") {
+//     renderState(state.Blog)
+//   }
+
+//   });
 
 
 // The uppercase "N" for "Navigo" represents that it is a constructor function
@@ -65,11 +69,6 @@ function renderState(st = state.Home) {
   ${Footer()}
 `);
   router.updatePageLinks();
-  const navUl = document.querySelector("nav ul");
-  const hamburgerIcon = document.querySelector("#hamburger-icon");
-  hamburgerIcon.addEventListener("click", ()=> {
-    navUl.classList.toggle("is-hidden--mobile");
-  })
 
 }
 
@@ -85,59 +84,61 @@ router
 // console.log(location.pathname.slice(1));
 
 
+db.ref("movies").once("value").then(snapshot => console.log(snapshot))
+
 
 // Gallery
-db.collection("pictures")
-  .get()
-  .then(querySnapshots => {
+// db.collection("pictures")
+//   .get()
+//   .then(querySnapshots => {
 
-    // Let's make sure to update instead of overwriting our markup
-    state.Gallery.main +=
-      `<div class="gallery">` +
-      querySnapshots.docs
-        .map(doc => {
-          // Combine `const` with destructuring to create 3 variables from the keys in our object literal
-          const { caption, credit, imgURL } = doc.data();
+//     // Let's make sure to update instead of overwriting our markup
+//     state.Gallery.main +=
+//       `<div class="gallery">` +
+//       querySnapshots.docs
+//         .map(doc => {
+//           // Combine `const` with destructuring to create 3 variables from the keys in our object literal
+//           const { caption, credit, imgURL } = doc.data();
 
-          return `
-        <figure>
-          <img src="${imgURL}" alt="">
-          <figcaption>${caption} - ${credit}</figcaption>
-        </figure>
-      `;
-        })
-        .join(" ") +
-      `</div>`;
+//           return `
+//         <figure>
+//           <img src="${imgURL}" alt="">
+//           <figcaption>${caption} - ${credit}</figcaption>
+//         </figure>
+//       `;
+//         })
+//         .join(" ") +
+//       `</div>`;
 
-    if (
-      router.lastRouteResolved().params &&
-      capitalize(router.lastRouteResolved().params.page) === "Gallery"
-    ) {
-      renderState(state.Gallery);
+//     if (
+//       router.lastRouteResolved().params &&
+//       capitalize(router.lastRouteResolved().params.page) === "Gallery"
+//     ) {
+//       renderState(state.Gallery);
 
-      const imgURL = document.querySelector("#imgURL");
-      const caption = document.querySelector("#caption");
-      const credit = document.querySelector("#credit");
+//       const imgURL = document.querySelector("#imgURL");
+//       const caption = document.querySelector("#caption");
+//       const credit = document.querySelector("#credit");
 
-      document.querySelector("form").addEventListener("submit", e => {
-        e.preventDefault();
+//       document.querySelector("form").addEventListener("submit", e => {
+//         e.preventDefault();
 
-        db.collection("pictures")
-          .add({
-            imgURL: imgURL.value,
-            caption: caption.value,
-            credit: credit.value
-          })
-          .then(function(docRef) {
-            console.log("Document written with ID: ", docRef.id);
-          })
-          .catch(function(error) {
-            console.error("Error adding document: ", error);
-          });
-      });
-    }
-  })
-  .catch(err => console.error("Error loading pics", err));
+//         db.collection("pictures")
+//           .add({
+//             imgURL: imgURL.value,
+//             caption: caption.value,
+//             credit: credit.value
+//           })
+//           .then(function(docRef) {
+//             console.log("Document written with ID: ", docRef.id);
+//           })
+//           .catch(function(error) {
+//             console.error("Error adding document: ", error);
+//           });
+//       });
+//     }
+//   })
+//   .catch(err => console.error("Error loading pics", err));
 
 
 
