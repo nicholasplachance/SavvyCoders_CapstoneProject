@@ -15,6 +15,7 @@ import { capitalize } from "lodash"
 
 // Import firebase db
 import { auth, db } from "./firebase"
+import { database } from "firebase";
 
 // console.log(auth);
 
@@ -84,7 +85,19 @@ router
 // console.log(location.pathname.slice(1));
 
 
-db.ref("movies").once("value").then(snapshot => console.log(snapshot))
+const query = db.ref("0/movies");
+
+const movies = query.once("value")
+  .then(snap => {
+  let data = snap.child("0/movieId").val()
+  console.log(data)
+  return data
+});
+
+console.log(movies)
+
+
+
 
 
 // Gallery
