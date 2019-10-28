@@ -1,2 +1,3 @@
-export default () => `<div class="hero-image">
-</div>`
+export default () =>  `
+  <div class="hero-image"></div>
+  `;
