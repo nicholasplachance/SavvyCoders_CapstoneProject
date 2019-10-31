@@ -110,7 +110,7 @@ query.once("value").then(function(snapshot) {
         return response.data;
       })
       .then(data => {
-        state.Movies.main += `<section><div class="dc-movie--card---container">
+        state.Movies.main += `<section class="movie-sections"><div class="dc-movie--card---container">
               <h2 class="sub-header">${capitalize(childData.moviePublisher)} Movie</h2>
         <div class="flex-container--mobile---row card-container">
     <div class="flex-container--mobile---column card-labels">

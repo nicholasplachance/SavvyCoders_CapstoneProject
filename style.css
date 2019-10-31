@@ -376,6 +376,11 @@ footer p {
     margin: calc(var(--base-spacing) * 1);
   }
 
+  .movie-sections {
+    padding: calc(var(--base-spacing) * 3);
+    width: 95vw;
+  }
+
   /* Navigation */
 
   nav {
