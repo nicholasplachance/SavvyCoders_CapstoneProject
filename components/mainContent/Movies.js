@@ -2,7 +2,7 @@ import { grabEndpoints } from "../../moviesData/lib";
 
 function generateArticlesHTML(movies) {
   console.log("3 movie html");
-  grabEndpoints();
+  console.log(movies)
 
   return movies
     .map(
@@ -14,7 +14,7 @@ function generateArticlesHTML(movies) {
         rated,
         plot,
         poster
-      }) => `<div class="flex-container--mobile---row card-container">
+      }) => `<section><div class="flex-container--mobile---row card-container">
             <div class="flex-container--mobile---column card-labels">
                 <h3 class="movie-title">${title}</h3>
                 <h4 class="movie-release--year">${director} | ${year}</h4>
@@ -27,13 +27,14 @@ function generateArticlesHTML(movies) {
               <img src="${poster}" alt="">
             </div>
           </div>
+          </section>
             `
     )
     .join(" ");
 }
 
-export default ({ movies }) => `
-    ${generateArticlesHTML(movies)}`;
-
+export default ({ movies }) =>
+  `<div class="hero-image"></div>
+  ${generateArticlesHTML(movies)}`
 // export default () => `<div class="hero-image">
 // </div>`
