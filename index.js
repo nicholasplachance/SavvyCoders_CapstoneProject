@@ -11,7 +11,6 @@ import Navigo from "navigo";
 
 import movies from "/moviesData";
 import { capitalize } from "lodash";
-console.log(movies())
 // import * as lib from "./movies"
 // console.log(typeof movies())
 // Import firebase db
@@ -42,7 +41,8 @@ function renderState(st = state.Home) {
 `;
   router.updatePageLinks();
   if (capitalize(router.lastRouteResolved().url.slice(1)) === "Movies") {
-    movies(getProxy(st));
+    console.log("1 router");
+    movies(st);
   }
 }
 

@@ -43,5 +43,8 @@ export function grabEndpoints() {
         });
     });
   });
+  console.log("4 firebase callback");
+  // console.log(movieArray);
+  // console.log(movieArray.length)
   return movieArray;
 }
