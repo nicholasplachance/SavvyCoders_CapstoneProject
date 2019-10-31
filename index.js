@@ -88,7 +88,7 @@ const apiKey = `31152d26`;
 
 const query = db.ref("data/0/movies").orderByKey();
 query.once("value").then(function(snapshot) {
-  console.log(snapshot);
+  console.log("Snapshot", snapshot);
   snapshot.forEach(function(childSnapshot) {
     // key will be "ada" the first time and "alan" the second time
     const key = childSnapshot.key;
@@ -96,7 +96,7 @@ query.once("value").then(function(snapshot) {
     // childData will be the actual contents of the child
     const childData = childSnapshot.val();
     console.log(childData.moviePublisher)
-    // console.log(childData);
+    console.log("Child data", childData);
     let movie = childData.movieId
     if ( childData.moviePublisher === "dc") {
       console.log(childData)
