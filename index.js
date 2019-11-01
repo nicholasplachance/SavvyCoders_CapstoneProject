@@ -42,6 +42,7 @@ function renderState(st = state.Home) {
   router.updatePageLinks();
   if (capitalize(router.lastRouteResolved().url.slice(1)) === "Movies") {
     console.log("1 router");
+    console.log(movies(st))
     movies(st);
   }
 }

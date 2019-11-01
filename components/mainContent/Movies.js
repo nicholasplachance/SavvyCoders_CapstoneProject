@@ -2,7 +2,6 @@ import { grabEndpoints } from "../../moviesData/lib";
 
 function generateArticlesHTML(movies) {
   console.log("3 movie html");
-  console.log(movies)
 
   return movies
     .map(
@@ -14,7 +13,7 @@ function generateArticlesHTML(movies) {
         rated,
         plot,
         poster
-      }) => `<section><div class="flex-container--mobile---row card-container">
+      }) => `<section class="movie-sections"><div class="flex-container--mobile---row card-container">
             <div class="flex-container--mobile---column card-labels">
                 <h3 class="movie-title">${title}</h3>
                 <h4 class="movie-release--year">${director} | ${year}</h4>
@@ -24,7 +23,7 @@ function generateArticlesHTML(movies) {
               <a href="#" class="read-more">Read more...</a>
             </div>
             <div class="flex-container--mobile---row card-images">
-              <img src="${poster}" alt="">
+              <img class="movie-poster"  src="${poster}" alt="">
             </div>
           </div>
           </section>
@@ -33,8 +32,44 @@ function generateArticlesHTML(movies) {
     .join(" ");
 }
 
+
 export default ({ movies }) =>
-  `<div class="hero-image"></div>
+  `<div class="hero-image">
+
+  <div class="stone-div">
+
+  <div class="grid-item">
+    <div class="stone-name">Space stone</div>
+    <div class="stone space-stone"></div>
+  </div>
+
+  <div class="grid-item">
+  <div class="stone-name">Power stone</div>
+  <div class="stone power-stone"></div>
+  </div>
+
+  <div class="grid-item">
+  <div class="stone-name">Soul stone</div>
+  <div class="stone soul-stone"></div>
+  </div>
+
+  <div class="grid-item">
+  <div class="stone-name">Reality stone</div>
+  <div class="stone reality-stone"></div>
+  </div>
+
+  <div class="grid-item">
+  <div class="stone-name">Mind stone</div>
+  <div class="stone mind-stone"></div>
+  </div>
+
+  <div class="grid-item">
+  <div class="stone-name">Time stone</div>
+  <div class="stone time-stone"></div>
+  </div>
+
+  </div>
+  </div>
   ${generateArticlesHTML(movies)}`
 // export default () => `<div class="hero-image">
 // </div>`

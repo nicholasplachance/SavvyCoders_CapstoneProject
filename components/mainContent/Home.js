@@ -1,5 +1,6 @@
 export default () =>
-`<div class="hero-image">
+  `<div class="hero-image">
+  <p>We are a website that shows all current Superhero movies and recommends a comic to read to learn more about the characters, worlds, and story arcs.</p>
 </div>
 <div class="flex-container--desktop flex-direction--row">
 <section>

@@ -5,7 +5,16 @@
         {
           "moviePublisher": "marvel",
           "movieName": "Iron Man",
-          "movieId": "tt0371746"
+          "movieId": "tt0371746",
+          "parkHours": {
+            "monday": "8-5",
+            "tuesday": "8-5"
+          },
+          "parkTrials": {
+            "monday": "8-5",
+            "tuesday": "8-5"
+          },
+          "waterPark": "fal"
         },
         {
           "moviePublisher": "marvel",
