@@ -154,6 +154,7 @@ nav .fas:hover {
   max-height: 420px;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -174,17 +175,19 @@ nav .fas:hover {
 }
 
 .stone-div {
-  width: 90vw;
+  /* width: 90vw; */
   display: grid;
   grid-template-columns: auto auto auto;
+  background-color: var(--primary-shadow);
+  grid-column-gap: 16px;
   padding: 10px;
+  grid-row-gap: 16px;
 }
 
 .stone {
   width: 7.5vw;
   height: 7.5vh;
   margin: 5px;
-  border: 1px solid rgba(0, 0, 0, .2);
 }
 
 .grid-item {
@@ -205,6 +208,10 @@ nav .fas:hover {
 
 .space-stone {
   background: var(--space-stone);
+}
+
+.space-stone:hover {
+  box-shadow: -4px 1px 6px -1px var(--space-stone);
 }
 
 .power-stone {
@@ -336,6 +343,7 @@ section p {
 
 .card-container {
   width: 90vw;
+  height: 60vh;
   margin: var(--base-spacing) 0;
   border: 2.5px solid var(--primary-shadow);
   border-radius: 2.5%;
@@ -345,10 +353,10 @@ section p {
 
 .card-labels {
   color: var(--primary-text);
-  text-shadow: px 1.5px var(--primary-shadow);
   text-shadow: 1.5px 1px var(--primary-shadow);
   width: 100%;
-  line-height: 3.25em;
+  max-height: 57.5vh;
+  line-height: 2.5em;
   text-align: center;
   margin: calc(var(--base-spacing) * 2);
   padding: calc(var(--base-spacing) * 1.25);
@@ -367,9 +375,9 @@ section p {
 }
 
 .card-labels p {
-  width: 80%;
   font-size: 1.4em;
   text-align: justify;
+  padding: var(--base-spacing);
 }
 
 /* Footer style */
@@ -445,6 +453,34 @@ footer p {
   .hero-image p {
     font-size: 4.5em;
   }
+
+  .section-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: var(--base-spacing);
+  }
+
+  .card-labels {
+    margin: var(--base-spacing) 0;
+    line-height: 2.75em;
+    max-height: 65vh;
+  }
+
+  .movie-poster {
+    height: 25vh;
+    width: auto;
+    margin: calc(var(--base-spacing) * 1);
+  }
+
+  .movie-sections {
+    padding: calc(var(--base-spacing) * 3);
+    width: auto;
+  }
+
+  .card-container {
+    height: 65vh;
+    width: auto;
+  }
 }
 
 /* Desktop view */
@@ -468,7 +504,7 @@ footer p {
 
   .movie-sections {
     padding: calc(var(--base-spacing) * 3);
-    width: 95vw;
+    width: auto;
   }
 
   /* Navigation */
@@ -522,5 +558,12 @@ footer p {
     display: flex;
     align-items: center;
     align-content: center;
+  }
+
+  .flex-container--mobile---row {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 }

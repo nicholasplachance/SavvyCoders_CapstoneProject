@@ -2,7 +2,7 @@ import { grabEndpoints } from "../../moviesData/lib";
 
 function generateArticlesHTML(movies) {
   console.log("3 movie html");
-
+  console.log(movies)
   return movies
     .map(
       ({
@@ -35,9 +35,8 @@ function generateArticlesHTML(movies) {
 
 export default ({ movies }) =>
   `<div class="hero-image">
-
+  <div><h3 class="sub-header">The Infinity Stones</h3></div>
   <div class="stone-div">
-
   <div class="grid-item">
     <div class="stone-name">Space stone</div>
     <div class="stone space-stone"></div>
@@ -70,6 +69,6 @@ export default ({ movies }) =>
 
   </div>
   </div>
-  ${generateArticlesHTML(movies)}`
+  <div class="section-grid">${generateArticlesHTML(movies)}</div>`
 // export default () => `<div class="hero-image">
 // </div>`

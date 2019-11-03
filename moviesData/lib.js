@@ -6,13 +6,11 @@ export function grabEndpoints() {
   let movieArray = [];
   const apiKey = `31152d26`;
   const query = db.ref("data/0/movies").orderByKey();
-  console.log(query)
-  query.once("value").then(snapshot => {
+  query.once("value").then(function(snapshot) {
     // console.log(snapshot);
     snapshot.forEach(function(childSnapshot) {
       const childData = childSnapshot.val();
       // console.log(childData);
-      // const brewery = childData.brewery
       let movie = childData.movieId;
       let url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
       firebaseData.push(url);
