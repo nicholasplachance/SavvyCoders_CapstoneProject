@@ -137,7 +137,7 @@ nav .fas {
   font-size: 4.5em;
   position: absolute;
   margin: var(--base-spacing);
-  transform: translateX(calc(100vw - (var(--base-spacing) * 10)));
+  transform: translateX(calc(100vw - (var(--base-spacing) * 12)));
   z-index: 2;
 }
 
@@ -166,7 +166,7 @@ nav .fas:hover {
   background: var(--secondary-variant);
   text-align: center;
   font-size: 3.5em;
-  color: var(--primary);
+  color: var(--primary-text);
   border-radius: var(--base-spacing);
   text-shadow: -1.5px 0 var(--primary-shadow), 0 1.5px var(--primary-shadow),
     1.5px 0 var(--primary-shadow), 0 -1.5px var(--primary-shadow);
@@ -315,6 +315,11 @@ section p {
   display: inline-block;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-rows: 27.5vh auto;
+}
+
 .movie-poster {
   height: 30vh;
   width: auto;
@@ -343,12 +348,15 @@ section p {
 
 .card-container {
   width: 90vw;
-  height: 60vh;
   margin: var(--base-spacing) 0;
   border: 2.5px solid var(--primary-shadow);
   border-radius: 2.5%;
   background: var(--primary);
   box-shadow: 2.25px 2.4px 2px var(--secondary-variant);
+}
+
+.movies-container {
+  height: 60vh;
 }
 
 .card-labels {
@@ -358,10 +366,7 @@ section p {
   max-height: 57.5vh;
   line-height: 2.5em;
   text-align: center;
-  margin: calc(var(--base-spacing) * 2);
   padding: calc(var(--base-spacing) * 1.25);
-  box-shadow: 2px 0 var(--secondary-variant), 0 2px var(--secondary-variant),
-    2px 0 var(--secondary-variant), 0 -2px var(--secondary-variant);
 }
 
 .card-labels h3 {
@@ -477,7 +482,7 @@ footer p {
     width: auto;
   }
 
-  .card-container {
+  .movies-container {
     height: 65vh;
     width: auto;
   }
@@ -497,7 +502,7 @@ footer p {
   }
 
   .movie-poster {
-    height: 25vh;
+    height: 32.5vh;
     width: auto;
     margin: calc(var(--base-spacing) * 1);
   }

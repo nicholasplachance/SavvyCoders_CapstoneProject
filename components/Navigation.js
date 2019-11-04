@@ -11,7 +11,8 @@ function linksBuilder(links) {
 
 export default function() {
   return `<nav>
-  <span id="hamburger-icon" class="fas fa-hamburger is-hidden--desktop"></span>
+  <i ></i>
+  <span id="hamburger-icon" class="fas fa-mask is-hidden--desktop"></span>
   <ul class="is-hidden--mobile show-on--desktop">
   ${linksBuilder(Links)}
   </ul>

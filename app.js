@@ -1,7 +1,9 @@
 const hamburgerIcon = document.querySelector("#hamburger-icon");
 const navUl = document.querySelector("nav ul");
-
+console.log("test 2")
+console.log(hamburgerIcon)
 hamburgerIcon.addEventListener("click", ()=> {
+  console.log('test 1')
   navUl.classList.toggle("is-hidden--mobile");
 })
 

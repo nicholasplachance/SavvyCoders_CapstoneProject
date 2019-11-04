@@ -13,17 +13,17 @@ function generateArticlesHTML(movies) {
         rated,
         plot,
         poster
-      }) => `<section class="movie-sections"><div class="flex-container--mobile---row card-container">
+      }) => `<section class="movie-sections"><div class="card-container movies-container grid-container">
             <div class="flex-container--mobile---column card-labels">
                 <h3 class="movie-title">${title}</h3>
                 <h4 class="movie-release--year">${director} | ${year}</h4>
                 <h4 class="movie-actors">${actors}</h4>
                 <h4>${rated}</h4>
                 <p class="movie-plot">${plot}</p>
-              <a href="#" class="read-more">Read more...</a>
             </div>
             <div class="flex-container--mobile---row card-images">
               <img class="movie-poster"  src="${poster}" alt="">
+              <a href="#" class="read-more">Read more...</a>
             </div>
           </div>
           </section>
