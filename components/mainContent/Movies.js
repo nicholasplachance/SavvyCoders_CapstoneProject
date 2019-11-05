@@ -16,7 +16,7 @@ function generateArticlesHTML(movies) {
         category
       }) => `<section class="movie-sections"><div class="card-container movies-container grid-container">
             <div class="flex-container--mobile---column card-labels">
-                <h3 class="movie-title">${title}</h3>
+                <h3 class="movie-title sub-header">${title}</h3>
                 <h4 class="movie-release--year">${director} | ${year}</h4>
                 <h4 class="movie-actors">${actors}</h4>
                 <h4>${rated}</h4>

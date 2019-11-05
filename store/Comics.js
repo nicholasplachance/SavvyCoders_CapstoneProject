@@ -9,7 +9,7 @@ export default {
     illustrator: "Frank Miller",
     cover: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/330474/330474._SX360_CLs%7C360,553%7Ccu/cmx-cu-sash-lg.png%7C0,0,361,554%20208,401,152,152_QL80_TTD_.jpg",
     url: "https://www.comixology.com/Batman-The-Dark-Knight-Returns-30th-Anniversary-Edition/digital-comic/330474?ref=c2VyaWVzL3ZpZXcvZGVza3RvcC9ncmlkTGlzdC9jb21peG9sb2d5VW5saW1pdGVk",
-    plot: "Writer/artist Frank Miller completely reinvents the legend of Batman in this saga of a near-future Gotham City gone to rot, 10 years after the Dark Knight's retirement. Forced to take action, the Dark Knight returns in a blaze of fury, taking on a whole new generation of criminals and matching their level of violence. He is soon joined by a new Robin--a girl named Carrie Kelley--who proves to be just as invaluable as her predecessors."
+    plot: "Batman in this saga of a near-future Gotham City gone to rot, 10 years after the Dark Knight's retirement. Forced to take action, the Dark Knight returns in a blaze of fury, taking on a whole new generation of criminals and matching their level of violence. He is soon joined by a new Robin--a girl named Carrie Kelley--who proves to be just as invaluable as her predecessors."
   },
   {
     title: "Infinity Gauntlet",

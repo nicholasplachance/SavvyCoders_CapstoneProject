@@ -14,7 +14,7 @@ function generateArticlesHTML(comics) {
         plot
       }) => `<section class="movie-sections"><div class="card-container movies-container grid-container">
             <div class="flex-container--mobile---column card-labels">
-                <h3 class="movie-title">${title}</h3>
+                <h3 class="movie-title sub-header">${title}</h3>
                 <h4 class="movie-release--year">${author} | ${year}</h4>
                 <h4 class="movie-actors">${illustrator}</h4>
                 <h4>${category}</h4>

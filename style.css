@@ -107,7 +107,7 @@ nav ul {
 nav li a,
 footer li a {
   text-decoration: none;
-  font-size: 2.2em;
+  font-size: 1.8em;
   padding: var(--base-spacing);
   text-align: center;
   color: var(--secondary-variant);
@@ -165,7 +165,7 @@ nav .fas:hover {
   width: calc(100vw - calc(var(--base-spacing) * 3));
   background: var(--secondary-variant);
   text-align: center;
-  font-size: 3.25em;
+  font-size: 2.5em;
   color: var(--primary-text);
   border-radius: var(--base-spacing);
   text-shadow: -1.5px 0 var(--primary-shadow), 0 1.5px var(--primary-shadow),
@@ -266,14 +266,14 @@ main {
 .sub-header {
   padding: var(--base-spacing);
   margin: var(--base-spacing);
-  background-color: var(--secondary-variant);
+  background-color: var(--primary);
   text-align: center;
-  color: var(--secondary-variant);
+  color: var(--primary);
   font-size: 3.2em;
   border: 2px solid var(--primary-shadow);
   line-height: calc(var(--base-spacing) * 4);
-  text-shadow: -1.5px 0 var(--secondary-shadow), 0 1.5px var(--secondary-shadow),
-    1.5px 0 var(--secondary-shadow), 0 -1.5px var(--secondary-shadow);
+  text-shadow: -2px 0 var(--primary-shadow), 0 2px var(--primary-shadow),
+    2px 0 var(--primary-shadow), 0 -2px var(--primary-shadow);
   box-shadow: 2.75px 2.5px 2px var(--primary-shadow);
 }
 
@@ -327,17 +327,24 @@ section {
   background-color: var(--primary-shadow);
 }
 
+.home-images {
+  width: 280px;
+  height: 300px;
+  padding: 20px;
+}
+
 section p {
   text-align: center;
   line-height: 1.6em;
-  padding: (var(--base-spacing) * 1.75);
+  margin: var(--base-spacing);
+  padding: calc(var(--base-spacing) * 1.5);
   font-size: 1.6em;
   display: inline-block;
 }
 
 .grid-container {
   display: grid;
-  grid-template-rows: 35vh auto;
+  grid-template-rows: 60vh auto;
 }
 
 .movie-poster {
@@ -369,13 +376,11 @@ section p {
 .card-container {
   width: 90vw;
   margin: var(--base-spacing) 0;
-  border: 2.5px solid var(--primary-shadow);
+  border: 1.5px solid var(--primary-shadow);
   border-radius: 2.5%;
   background: var(--primary);
   box-shadow: 2.25px 2.4px 2px var(--secondary-variant);
 }
-
-
 
 .card-labels {
   color: var(--primary-text);
@@ -505,13 +510,13 @@ footer p {
   }
 
   .movies-container {
-    height: 50vh;
+    height: 55vh;
     width: auto;
   }
 
   .grid-container {
     display: grid;
-    grid-template-rows: 20vh auto;
+    grid-template-rows: 25vh auto;
   }
 
   .read-more {
@@ -586,14 +591,14 @@ footer p {
   }
 
   .movies-container {
-    height: 70vh;
+    height: 75vh;
     width: auto;
   }
 
 
   .grid-container {
     display: grid;
-    grid-template-rows: 32.5vh auto;
+    grid-template-rows: 37vh auto;
   }
 
   .flex-container--desktop {
