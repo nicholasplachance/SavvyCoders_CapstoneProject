@@ -337,7 +337,7 @@ section p {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 25vh auto;
+  grid-template-rows: 35vh auto;
 }
 
 .movie-poster {
@@ -375,9 +375,7 @@ section p {
   box-shadow: 2.25px 2.4px 2px var(--secondary-variant);
 }
 
-.movies-container {
-  height: 60vh;
-}
+
 
 .card-labels {
   color: var(--primary-text);
@@ -507,8 +505,17 @@ footer p {
   }
 
   .movies-container {
-    height: 65vh;
+    height: 50vh;
     width: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-rows: 20vh auto;
+  }
+
+  .read-more {
+    font-size: 1.4em;
   }
 }
 
@@ -574,9 +581,19 @@ footer p {
     width: auto;
   }
 
+  .read-more {
+    font-size: 2.4em;
+  }
+
+  .movies-container {
+    height: 65vh;
+    width: auto;
+  }
+
+
   .grid-container {
     display: grid;
-    grid-template-rows: 35vh auto;
+    grid-template-rows: 30vh auto;
   }
 
   .flex-container--desktop {

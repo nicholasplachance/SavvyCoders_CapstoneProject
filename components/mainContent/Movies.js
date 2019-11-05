@@ -24,7 +24,6 @@ function generateArticlesHTML(movies) {
             </div>
             <div class="flex-container--mobile---row card-images">
               <img class="movie-poster"  src="${poster}" alt="">
-              <h5 class="learn-more">Learn about:</h5>
               <li><a href="./comics" data-navigo class="read-more">${category}</a></li>
             </div>
           </div>
