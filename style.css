@@ -337,7 +337,7 @@ section p {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 35vh auto;
+  grid-template-rows: 25vh auto;
 }
 
 .movie-poster {
@@ -572,6 +572,11 @@ footer p {
 
   .card-container {
     width: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-rows: 35vh auto;
   }
 
   .flex-container--desktop {
