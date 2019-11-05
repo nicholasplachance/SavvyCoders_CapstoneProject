@@ -14,7 +14,7 @@ import { capitalize } from "lodash";
 // import * as lib from "./movies"
 // console.log(typeof movies())
 // Import firebase db
-import { auth, db } from "./firebase";
+import { db } from "./firebase";
 import { get } from "http";
 
 // TODO create a firebase db fetch to retrieve imdb ids for api fetch request
@@ -41,8 +41,8 @@ function renderState(st = state.Home) {
 `;
   router.updatePageLinks();
   if (capitalize(router.lastRouteResolved().url.slice(1)) === "Movies") {
-    console.log("1 router");
-    console.log(movies(st))
+    // console.log("1 router");
+    // console.log(movies(st))
     movies(st);
   }
 }

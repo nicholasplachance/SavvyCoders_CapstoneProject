@@ -6,165 +6,187 @@
           "moviePublisher": "marvel",
           "movieName": "Iron Man",
           "movieId": "tt0371746",
-          "parkHours": {
-            "monday": "8-5",
-            "tuesday": "8-5"
-          },
-          "parkTrials": {
-            "monday": "8-5",
-            "tuesday": "8-5"
-          },
-          "waterPark": "fal"
+          "movieCategory": "Iron Man"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "The Incredible Hulk",
-          "movieId": "tt0800080"
+          "movieId": "tt0800080",
+          "movieCategory": "Hulk"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Iron Man 2",
-          "movieId": "tt1228705"
+          "movieId": "tt1228705",
+          "movieCategory": "Iron Man"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Thor",
-          "movieId": "tt0800369"
+          "movieId": "tt0800369",
+          "movieCategory": "Thor"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Captain America: The First Avenger",
-          "movieId": "tt0458339"
+          "movieId": "tt0458339",
+          "movieCategory": "Captian America"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "The Avengers",
-          "movieId": "tt0848228"
+          "movieId": "tt0848228",
+          "movieCategory": "Avengers"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Iron Man 3",
-          "movieId": "tt1300854"
+          "movieId": "tt1300854",
+          "movieCategory": "Iron Man"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Thor: The Dark World",
-          "movieId": "tt1981115"
+          "movieId": "tt1981115",
+          "movieCategory": "Thor"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Captain America: The Winter Soldier",
-          "movieId": "tt1843866"
+          "movieId": "tt1843866",
+          "movieCategory": "Captian America"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Guardians of the Galaxy",
-          "movieId": "tt2015381"
+          "movieId": "tt2015381",
+          "movieCategory": "Guardians of the Galaxy"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Avengers: Age of Ultron",
-          "movieId": "tt2395427"
+          "movieId": "tt2395427",
+          "movieCategory": "Avengers"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Ant-Man",
-          "movieId": "tt0478970"
+          "movieId": "tt0478970",
+          "movieCategory": "Ant-Man"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Captain America: Civil War",
-          "movieId": "tt3498820"
+          "movieId": "tt3498820",
+          "movieCategory":"Avengers"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Doctor Strange",
-          "movieId": "tt1211837"
+          "movieId": "tt1211837",
+          "movieCategory": "Doctor Strange"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Guardians of the Galaxy Vol. 2",
-          "movieId": "tt3896198"
+          "movieId": "tt3896198",
+          "movieCategory": "Guardians of the Galaxy"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Spider-Man: Homecoming",
-          "movieId": "tt2250912"
+          "movieId": "tt2250912",
+          "movieCategory": "Spider-Man"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Thor: Ragnarok",
-          "movieId": "tt3501632"
+          "movieId": "tt3501632",
+          "movieCategory": "Thor"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Black Panther",
-          "movieId": "tt1825683"
+          "movieId": "tt1825683",
+          "movieCategory": "Black Panther"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Avengers: Infinity War",
-          "movieId": "tt4154756"
+          "movieId": "tt4154756",
+          "movieCategory": "Avengers"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Ant-Man and the Wasp",
-          "movieId": "tt5095030"
+          "movieId": "tt5095030",
+          "movieCategory": "Ant-Man"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Captain Marvel",
-          "movieId": "tt4154664"
+          "movieId": "tt4154664",
+          "movieCategory": "Captian Marvel"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Avengers: Endgame",
-          "movieId": "tt4154796"
+          "movieId": "tt4154796",
+          "movieCategory": "Avengers"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Spider-Man: Far from Home",
-          "movieId": "tt6320628"
+          "movieId": "tt6320628",
+          "movieCategory": "Spider-Man"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Man of Steel",
-          "movieId": "tt0770828"
+          "movieId": "tt0770828",
+          "movieCategory": "Superman"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Batman v Superman: Dawn of Justice",
-          "movieId": "tt2975590"
+          "movieId": "tt2975590",
+          "movieCategory": "Batman"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Suicide Squad",
-          "movieId": "tt1386697"
+          "movieId": "tt1386697",
+          "movieCategory": "Suicide Squad"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Wonder Woman",
-          "movieId": "tt0451279"
+          "movieId": "tt0451279",
+          "movieCategory": "Wonder Woman"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Justice League",
-          "movieId": "tt0974015"
+          "movieId": "tt0974015",
+          "movieCategory": "Justice League"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Aquaman",
-          "movieId": "tt1477834"
+          "movieId": "tt1477834",
+          "movieCategory": "Aquaman"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Shazam!",
-          "movieId": "tt0448115"
+          "movieId": "tt0448115",
+          "movieCategory": "Shazam!"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Joker",
-          "movieId": "tt7286456"
+          "movieId": "tt7286456",
+          "movieCategory": "Joker"
         }
       ]
     }

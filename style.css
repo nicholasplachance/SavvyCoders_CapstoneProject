@@ -165,7 +165,7 @@ nav .fas:hover {
   width: calc(100vw - calc(var(--base-spacing) * 3));
   background: var(--secondary-variant);
   text-align: center;
-  font-size: 3.5em;
+  font-size: 3.25em;
   color: var(--primary-text);
   border-radius: var(--base-spacing);
   text-shadow: -1.5px 0 var(--primary-shadow), 0 1.5px var(--primary-shadow),
@@ -218,20 +218,40 @@ nav .fas:hover {
   background: var(--power-stone);
 }
 
+.power-stone:hover {
+  box-shadow: -4px 1px 6px -1px var(--power-stone);
+}
+
 .soul-stone {
   background: var(--soul-stone);
+}
+
+.soul-stone:hover {
+  box-shadow: -4px 1px 6px -1px var(--soul-stone);
 }
 
 .reality-stone {
   background: var(--reality-stone);
 }
 
+.reality-stone:hover {
+  box-shadow: -4px 1px 6px -1px var(--reality-stone);
+}
+
 .mind-stone {
   background: var(--mind-stone);
 }
 
+.mind-stone:hover {
+  box-shadow: -4px 1px 6px -1px var(--mind-stone);
+}
+
 .time-stone {
   background: var(--time-stone);
+}
+
+.time-stone:hover {
+  box-shadow: -4px 1px 6px -1px var(--time-stone);
 }
 
 /* Main styling */
@@ -293,7 +313,7 @@ section {
   color: var(--primary-text);
   text-shadow: 1.5px 1.5px var(--primary-shadow);
   background-color: var(--secondary-variant);
-  font-size: 1.8em;
+  font-size: 2em;
   border-radius: var(--base-spacing);
   box-shadow: 1px 1px var(--secondary-shadow);
   text-decoration: none;
@@ -317,7 +337,7 @@ section p {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 27.5vh auto;
+  grid-template-rows: 35vh auto;
 }
 
 .movie-poster {
@@ -370,13 +390,17 @@ section p {
 }
 
 .card-labels h3 {
-  font-size: 2.4em;
+  font-size: 3.2em;
   text-decoration: underline;
 }
 
 .card-labels h4 {
   width: 80%;
   font-size: 1.6em;
+}
+
+.learn-more {
+  font-size: 1.8em;
 }
 
 .card-labels p {
@@ -456,7 +480,7 @@ footer p {
   }
 
   .hero-image p {
-    font-size: 4.5em;
+    font-size: 4em;
   }
 
   .section-grid {

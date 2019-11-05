@@ -10,7 +10,7 @@ export function grabEndpoints() {
     // console.log(snapshot);
     snapshot.forEach(function(childSnapshot) {
       const childData = childSnapshot.val();
-      // console.log(childData);
+      let movieCategory = childData.movieCategory
       let movie = childData.movieId;
       let url = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie}`;
       firebaseData.push(url);
@@ -21,6 +21,7 @@ export function grabEndpoints() {
         })
         .then(data => {
           movieArray.push({
+            category: movieCategory,
             title: data.Title,
             director: data.Director,
             year: data.Year,
@@ -43,7 +44,7 @@ export function grabEndpoints() {
         });
     });
   });
-  console.log("4 firebase callback");
+  // console.log("4 firebase callback");
   // console.log(movieArray);
   // console.log(movieArray.length)
   return movieArray;

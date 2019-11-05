@@ -1,8 +1,8 @@
 import { grabEndpoints } from "../../moviesData/lib";
 
 function generateArticlesHTML(movies) {
-  console.log("3 movie html");
-  console.log(movies)
+  // console.log("3 movie html");
+  // console.log(movies)
   return movies
     .map(
       ({
@@ -12,7 +12,8 @@ function generateArticlesHTML(movies) {
         actors,
         rated,
         plot,
-        poster
+        poster,
+        category
       }) => `<section class="movie-sections"><div class="card-container movies-container grid-container">
             <div class="flex-container--mobile---column card-labels">
                 <h3 class="movie-title">${title}</h3>
@@ -23,7 +24,8 @@ function generateArticlesHTML(movies) {
             </div>
             <div class="flex-container--mobile---row card-images">
               <img class="movie-poster"  src="${poster}" alt="">
-              <a href="#" class="read-more">Read more...</a>
+              <h5 class="learn-more">Learn about:</h5>
+              <li><a href="./comics" data-navigo class="read-more">${category}</a></li>
             </div>
           </div>
           </section>
