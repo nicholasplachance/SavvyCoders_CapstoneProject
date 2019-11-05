@@ -8,12 +8,16 @@ export default st => {
   const titles = document.querySelectorAll("h3");
   const learnMore = document.querySelectorAll("h5");
   const div = document.querySelector(".movies-container")
+  titles.forEach(link => {
+    if( link.textContent === "Iron Man" ) {
+      console.log(link)
+    } else if ( link.textContent === "Thor" ) {
+      console.log(link)
+    }
+  })
   learnMore.forEach(link => {
     link.addEventListener("click", () => {
       console.log(link.textContent)
-      if ( link.textContent === "Iron Man" ) {
-
-      }
     })
   })
   console.log(learnMore);
