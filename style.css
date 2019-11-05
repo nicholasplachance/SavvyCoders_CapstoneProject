@@ -586,14 +586,14 @@ footer p {
   }
 
   .movies-container {
-    height: 65vh;
+    height: 70vh;
     width: auto;
   }
 
 
   .grid-container {
     display: grid;
-    grid-template-rows: 30vh auto;
+    grid-template-rows: 32.5vh auto;
   }
 
   .flex-container--desktop {
