@@ -14,7 +14,7 @@ ___
 
 ____
 
-### *Here the movies page did NOT want to render anything*
+### *Here the movies page when it did NOT want to render anything*
 
 <img src="./Capstone_Readme_Images/movies_page_no_render.png" alt="movies page no render" width="480"/>
 
