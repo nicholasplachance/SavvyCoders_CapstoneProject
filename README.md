@@ -39,7 +39,7 @@ ___
 ### I used Firebase for my backend and database
 #### I created a database.json file that I uploaded to firebase that stores all endpoints for the project
 
-<img src="./Capstone_Readme_Images/json_data  .png" alt="movies page no render" width="480"/>
+<img src="./Capstone_Readme_Images/json_data.png" alt="movies page no render" width="480"/>
 
 
 
