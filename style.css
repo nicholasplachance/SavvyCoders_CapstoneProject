@@ -548,6 +548,10 @@ footer p {
     width: auto;
   }
 
+  .hero-image p {
+    width: 75vw;
+  }
+
   /* Navigation */
 
   nav {
