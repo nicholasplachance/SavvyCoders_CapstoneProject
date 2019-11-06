@@ -172,6 +172,7 @@ nav .fas:hover {
     1.5px 0 var(--primary-shadow), 0 -1.5px var(--primary-shadow);
   box-shadow: 0 0, 0 4.25px var(--primary-shadow),
     3.75px 0 var(--primary-shadow), 0 0;
+  transform: translateY(calc(var(--base-spacing) * 2.2));
 }
 
 .stone-div {
