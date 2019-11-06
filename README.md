@@ -12,6 +12,7 @@ ___
 
 **Here are images of my project, there is code, the website itself, and misc. items.**
 
+____
 
 ### *Here the movies page did NOT want to render anything*
 
@@ -26,7 +27,7 @@ ___
 
 <img src="./Capstone_Readme_Images/movies_page_render_3.png" alt="movies page no render" width="480"/>
 
-
+____
 
 ### I had to use firebase and axios to pull from an API to get my data
 
@@ -34,7 +35,7 @@ ___
 
 <img src="./Capstone_Readme_Images/finish_firebase_fetch.png" alt="movies page no render" width="480"/>
 
-
+_____
 
 ### I used Firebase for my backend and database
 #### I created a database.json file that I uploaded to firebase that stores all endpoints for the project
@@ -46,7 +47,7 @@ ___
 <img src="./Capstone_Readme_Images/firebase_database.png" alt="movies page no render" width="480"/>
 
 
-
+_____
 
 ### I used Trello for project management and organization
 
