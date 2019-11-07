@@ -39,9 +39,21 @@ function generateArticlesHTML(movies) {
 export default ({ movies }) =>
   `<div class="hero-image">
 
-  <input type="text" autocomplete="on" id="myInput" placeholder="Search for movies.." title="Type in a movie">
+  <div class="search-div">
+  <input type="text" autocomplete="off" id="myInput" placeholder="Search for movies.." title="Type in a movie">
+  <div class="auto-complete">
+  </div>
+  </div>
 
-  <div><h3 class="sub-header">The Infinity Stones</h3></div>
+  <button id="toTop" type="button">Back to top!</button>
+
+  </div>
+  <div class="section-grid">${generateArticlesHTML(movies)}</div>`
+// export default () => `<div class="hero-image">
+// </div>`
+
+
+{/* <div><h3 class="sub-header">The Infinity Stones</h3></div>
   <div class="stone-div">
   <div class="grid-item">
     <div class="stone-name">Space stone</div>
@@ -74,7 +86,4 @@ export default ({ movies }) =>
   </div>
 
   </div>
-  </div>
-  <div class="section-grid">${generateArticlesHTML(movies)}</div>`
-// export default () => `<div class="hero-image">
-// </div>`
+  </div> */}

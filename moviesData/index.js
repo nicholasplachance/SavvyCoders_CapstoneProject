@@ -10,17 +10,43 @@ export default st => {
   const div = document.querySelector(".movies-container");
   const allMovies = document.querySelector(".section-grid");
   const input = document.querySelector("input");
+  const toTop = document.querySelector("#toTop");
+  const autoComplete = document.querySelector(".auto-complete")
+  const movieCategories = []
+
+
+  if ( movieEndPoints.length >= 2 ) {
+    console.log(st.movies)
+  }
 
   input.addEventListener("keyup", () => {
-    if ( allMovies.innerHTML.includes(input.value)) {
+    movieCategories.length = 0;
+    autoComplete.innerHTML = ``
+
+    if (allMovies.innerHTML.includes(input.value) && input.value !== "" ) {
+      st.movies.forEach( movie => {
+        movieCategories.push(movie.category)
+      })
+
+
+      movieCategories.forEach( category => {
+        if ( category.includes(input.value)) {
+          autoComplete.innerHTML += `<h3>${category}</h3>`
+        }
+
+      })
+      autoComplete.style.display = "flex"
       // document.querySelector("#Batman").scrollIntoView()
-      console.log(document.querySelector(`#${input.value}`))
-      document.querySelector(`#${input.value}`).scrollIntoView()
-
+      if (event.keyCode === 13) {
+        autoComplete.style.display = "none"
+        document.querySelector(`#${input.value}`).scrollIntoView({ block: "center", behavior: "smooth"});
+      }
     }
-
   });
 
+  toTop.addEventListener("click", () => {
+    document.querySelector("header").scrollIntoView({ block: "start", behavior: "smooth"});
+  })
 
   titles.forEach(link => {
     if (link.textContent === "Iron Man") {
