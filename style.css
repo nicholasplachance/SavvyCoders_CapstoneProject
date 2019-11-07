@@ -131,7 +131,6 @@ nav .is-hidden--mobile {
   height: 0;
   margin: 0;
   opacity: 0;
-  z-index: -1;
 }
 
 nav .fas {
@@ -174,6 +173,16 @@ nav .fas:hover {
   box-shadow: 0 0, 0 4.25px var(--primary-shadow),
     3.75px 0 var(--primary-shadow), 0 0;
   transform: translateY(calc(var(--base-spacing) * 3));
+}
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 90vw;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
 
 .stone-div {

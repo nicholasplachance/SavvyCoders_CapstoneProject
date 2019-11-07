@@ -7,19 +7,33 @@ export default st => {
   st.movies = movieEndPoints;
   const titles = document.querySelectorAll("h3");
   const learnMore = document.querySelectorAll("h5");
-  const div = document.querySelector(".movies-container")
-  titles.forEach(link => {
-    if( link.textContent === "Iron Man" ) {
-      console.log(link)
-    } else if ( link.textContent === "Thor" ) {
-      console.log(link)
+  const div = document.querySelector(".movies-container");
+  const allMovies = document.querySelector(".section-grid");
+  const input = document.querySelector("input");
+
+  input.addEventListener("keyup", () => {
+    if ( allMovies.innerHTML.includes(input.value)) {
+      // document.querySelector("#Batman").scrollIntoView()
+      console.log(document.querySelector(`#${input.value}`))
+      document.querySelector(`#${input.value}`).scrollIntoView()
+
     }
-  })
+
+  });
+
+
+  titles.forEach(link => {
+    if (link.textContent === "Iron Man") {
+      console.log(link);
+    } else if (link.textContent === "Thor") {
+      console.log(link);
+    }
+  });
   learnMore.forEach(link => {
     link.addEventListener("click", () => {
-      console.log(link.textContent)
-    })
-  })
+      console.log(link.textContent);
+    });
+  });
   console.log(learnMore);
   // learnMore.addEventListener("click", () => console.log(titles));
   // console.log(st.movies)

@@ -1,5 +1,6 @@
 import { grabEndpoints } from "../../moviesData/lib";
 
+
 function generateArticlesHTML(movies) {
   // console.log("3 movie html");
   // console.log(movies)
@@ -14,7 +15,8 @@ function generateArticlesHTML(movies) {
         plot,
         poster,
         category
-      }) => `<section class="movie-sections"><div class="card-container movies-container grid-container">
+      }) => `
+      <section class="movie-sections" id="${category}"><div class="card-container movies-container grid-container">
             <div class="flex-container--mobile---column card-labels">
                 <h3 class="movie-title sub-header">${title}</h3>
                 <h4 class="movie-release--year">${director} | ${year}</h4>
@@ -36,6 +38,9 @@ function generateArticlesHTML(movies) {
 
 export default ({ movies }) =>
   `<div class="hero-image">
+
+  <input type="text" autocomplete="on" id="myInput" placeholder="Search for movies.." title="Type in a movie">
+
   <div><h3 class="sub-header">The Infinity Stones</h3></div>
   <div class="stone-div">
   <div class="grid-item">
