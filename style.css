@@ -175,7 +175,7 @@ nav .fas:hover {
   transform: translateY(calc(var(--base-spacing) * 3));
 }
 
-#myInput {
+#search-bar {
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 70vw;
@@ -188,6 +188,13 @@ nav .fas:hover {
     8px 8px 0 var(--primary-shadow);
 }
 
+#search-submit {
+  width: 10vw;
+  height: 4vh;
+  top: 10%;
+  right: 10%;
+}
+
 .search-div {
   position: relative;
 }
@@ -198,8 +205,7 @@ nav .fas:hover {
   top: 80%;
   left: 5%;
   background: var(--secondary-shadow);
-  color: var(--secondary-text);
-  text-shadow: 2px 1.5px var(--primary-text);
+
   font-size: 2em;
   height: auto;
   overflow: auto;
@@ -212,8 +218,19 @@ nav .fas:hover {
     8px 8px 0 var(--primary-shadow);
 }
 
-.auto-complete h3 {
+.dropdown-option {
   margin: var(--base-spacing);
+  color: var(--secondary-text);
+  text-shadow: 2px 1.5px var(--primary-text);
+  width: 100%;
+  line-height: 2.25em;
+}
+
+.dropdown-option:hover {
+  cursor: pointer;
+  background: var(--primary-shadow);
+  color: var(--primary-text);
+  text-shadow: 2px 1.5px var(--secondary-text);
 }
 
 #toTop {

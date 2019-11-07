@@ -1,21 +1,11 @@
 import { grabEndpoints } from "../../moviesData/lib";
 
-
 function generateArticlesHTML(movies) {
   // console.log("3 movie html");
   // console.log(movies)
   return movies
     .map(
-      ({
-        title,
-        director,
-        year,
-        actors,
-        rated,
-        plot,
-        poster,
-        category
-      }) => `
+      ({ title, director, year, actors, rated, plot, poster, category }) => `
       <section class="movie-sections" id="${category}"><div class="card-container movies-container grid-container">
             <div class="flex-container--mobile---column card-labels">
                 <h3 class="movie-title sub-header">${title}</h3>
@@ -35,12 +25,14 @@ function generateArticlesHTML(movies) {
     .join(" ");
 }
 
-
 export default ({ movies }) =>
   `<div class="hero-image">
 
   <div class="search-div">
-  <input type="text" autocomplete="off" id="myInput" placeholder="Search for movies.." title="Type in a movie">
+  <input type="text" autocomplete="off" id="search-bar" placeholder="Search for movies.." title="Type in a movie">
+
+  <input id="search-submit" type="submit" value="Search!">
+
   <div class="auto-complete">
   </div>
   </div>
@@ -48,12 +40,12 @@ export default ({ movies }) =>
   <button id="toTop" type="button">Back to top!</button>
 
   </div>
-  <div class="section-grid">${generateArticlesHTML(movies)}</div>`
+  <div class="section-grid">${generateArticlesHTML(movies)}</div>`;
 // export default () => `<div class="hero-image">
 // </div>`
 
-
-{/* <div><h3 class="sub-header">The Infinity Stones</h3></div>
+{
+  /* <div><h3 class="sub-header">The Infinity Stones</h3></div>
   <div class="stone-div">
   <div class="grid-item">
     <div class="stone-name">Space stone</div>
@@ -86,4 +78,5 @@ export default ({ movies }) =>
   </div>
 
   </div>
-  </div> */}
+  </div> */
+}

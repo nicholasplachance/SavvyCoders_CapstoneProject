@@ -9,44 +9,65 @@ export default st => {
   const learnMore = document.querySelectorAll("h5");
   const div = document.querySelector(".movies-container");
   const allMovies = document.querySelector(".section-grid");
-  const input = document.querySelector("input");
+  const input = document.querySelector("#search-bar");
+  const searchSubmit = document.querySelector("#search-submit");
   const toTop = document.querySelector("#toTop");
-  const autoComplete = document.querySelector(".auto-complete")
-  const movieCategories = []
+  const autoComplete = document.querySelector(".auto-complete");
+  const movieCategories = [];
 
-
-  if ( movieEndPoints.length >= 2 ) {
-    console.log(st.movies)
+  if (movieEndPoints.length >= 2) {
+    console.log(st.movies);
   }
 
   input.addEventListener("keyup", () => {
     movieCategories.length = 0;
-    autoComplete.innerHTML = ``
+    autoComplete.innerHTML = ``;
 
-    if (allMovies.innerHTML.includes(input.value) && input.value !== "" ) {
-      st.movies.forEach( movie => {
-        movieCategories.push(movie.category)
-      })
+    if (allMovies.innerHTML.includes(input.value) && input.value !== "") {
+      st.movies.forEach(movie => {
+        movieCategories.push(movie.category);
+      });
 
-
-      movieCategories.forEach( category => {
-        if ( category.includes(input.value)) {
-          autoComplete.innerHTML += `<h3>${category}</h3>`
+      movieCategories.forEach(category => {
+        if (category.includes(input.value)) {
+          autoComplete.innerHTML += `<h3 class="dropdown-option">${category}</h3>`;
         }
+      });
 
-      })
-      autoComplete.style.display = "flex"
+      const dropdownOption = document.querySelector(".dropdown-option");
+      console.log(dropdownOption);
+
+      if (dropdownOption !== null) {
+        dropdownOption.addEventListener(
+          "click",
+          () => (input.value = dropdownOption.textContent)
+        );
+      }
+
+      autoComplete.style.display = "flex";
       // document.querySelector("#Batman").scrollIntoView()
+
+      searchSubmit.addEventListener("click", () => {
+        autoComplete.style.display = "none";
+        document
+          .querySelector(`#${input.value}`)
+          .scrollIntoView({ block: "center", behavior: "smooth" });
+      });
+
       if (event.keyCode === 13) {
-        autoComplete.style.display = "none"
-        document.querySelector(`#${input.value}`).scrollIntoView({ block: "center", behavior: "smooth"});
+        autoComplete.style.display = "none";
+        document
+          .querySelector(`#${input.value}`)
+          .scrollIntoView({ block: "center", behavior: "smooth" });
       }
     }
   });
 
   toTop.addEventListener("click", () => {
-    document.querySelector("header").scrollIntoView({ block: "start", behavior: "smooth"});
-  })
+    document
+      .querySelector("header")
+      .scrollIntoView({ block: "start", behavior: "smooth" });
+  });
 
   titles.forEach(link => {
     if (link.textContent === "Iron Man") {
