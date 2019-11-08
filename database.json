@@ -6,7 +6,7 @@
           "moviePublisher": "marvel",
           "movieName": "Iron Man",
           "movieId": "tt0371746",
-          "movieCategory": "IronMan"
+          "movieCategory": "Iron-Man"
         },
         {
           "moviePublisher": "marvel",
@@ -18,7 +18,7 @@
           "moviePublisher": "marvel",
           "movieName": "Iron Man 2",
           "movieId": "tt1228705",
-          "movieCategory": "IronMan"
+          "movieCategory": "Iron-Man"
         },
         {
           "moviePublisher": "marvel",
@@ -30,7 +30,7 @@
           "moviePublisher": "marvel",
           "movieName": "Captain America: The First Avenger",
           "movieId": "tt0458339",
-          "movieCategory": "CaptianAmerica"
+          "movieCategory": "Captian-America"
         },
         {
           "moviePublisher": "marvel",
@@ -42,7 +42,7 @@
           "moviePublisher": "marvel",
           "movieName": "Iron Man 3",
           "movieId": "tt1300854",
-          "movieCategory": "IronMan"
+          "movieCategory": "Iron-Man"
         },
         {
           "moviePublisher": "marvel",
@@ -54,13 +54,13 @@
           "moviePublisher": "marvel",
           "movieName": "Captain America: The Winter Soldier",
           "movieId": "tt1843866",
-          "movieCategory": "CaptianAmerica"
+          "movieCategory": "Captain-America"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Guardians of the Galaxy",
           "movieId": "tt2015381",
-          "movieCategory": "Guardians of the Galaxy"
+          "movieCategory": "Guardians-of-the-Galaxy"
         },
         {
           "moviePublisher": "marvel",
@@ -84,13 +84,13 @@
           "moviePublisher": "marvel",
           "movieName": "Doctor Strange",
           "movieId": "tt1211837",
-          "movieCategory": "DoctorStrange"
+          "movieCategory": "Doctor-Strange"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Guardians of the Galaxy Vol. 2",
           "movieId": "tt3896198",
-          "movieCategory": "Guardians of the Galaxy"
+          "movieCategory": "Guardians-of-the-Galaxy"
         },
         {
           "moviePublisher": "marvel",
@@ -108,7 +108,7 @@
           "moviePublisher": "marvel",
           "movieName": "Black Panther",
           "movieId": "tt1825683",
-          "movieCategory": "BlackPanther"
+          "movieCategory": "Black-Panther"
         },
         {
           "moviePublisher": "marvel",
@@ -126,7 +126,7 @@
           "moviePublisher": "marvel",
           "movieName": "Captain Marvel",
           "movieId": "tt4154664",
-          "movieCategory": "CaptianMarvel"
+          "movieCategory": "Captain-Marvel"
         },
         {
           "moviePublisher": "marvel",
@@ -156,19 +156,19 @@
           "moviePublisher": "dc",
           "movieName": "Suicide Squad",
           "movieId": "tt1386697",
-          "movieCategory": "SuicideSquad"
+          "movieCategory": "Suicide-Squad"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Wonder Woman",
           "movieId": "tt0451279",
-          "movieCategory": "WonderWoman"
+          "movieCategory": "Wonder-Woman"
         },
         {
           "moviePublisher": "dc",
           "movieName": "Justice League",
           "movieId": "tt0974015",
-          "movieCategory": "JusticeLeague"
+          "movieCategory": "Justice-League"
         },
         {
           "moviePublisher": "dc",
@@ -180,7 +180,7 @@
           "moviePublisher": "dc",
           "movieName": "Shazam!",
           "movieId": "tt0448115",
-          "movieCategory": "Shazam!"
+          "movieCategory": "Shazam"
         },
         {
           "moviePublisher": "dc",

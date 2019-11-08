@@ -14,6 +14,7 @@ export default st => {
   const toTop = document.querySelector("#toTop");
   const autoComplete = document.querySelector(".auto-complete");
   const movieCategories = [];
+  console.log(st.movies)
 
   if (movieEndPoints.length >= 2) {
     console.log(st.movies);
@@ -52,6 +53,7 @@ export default st => {
         document
           .querySelector(`#${input.value}`)
           .scrollIntoView({ block: "center", behavior: "smooth" });
+          input.value = ""
       });
 
       if (event.keyCode === 13) {
@@ -59,6 +61,7 @@ export default st => {
         document
           .querySelector(`#${input.value}`)
           .scrollIntoView({ block: "center", behavior: "smooth" });
+          input.value = ""
       }
     }
   });
