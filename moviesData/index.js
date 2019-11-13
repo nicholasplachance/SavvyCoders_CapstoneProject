@@ -31,7 +31,7 @@ export default st => {
 
       movieCategories.forEach(category => {
         if (category.includes(input.value)) {
-          autoComplete.innerHTML += `<h3 class="dropdown-option">${category}</h3>`;
+          autoComplete.innerHTML += `<h3 class="dropdown-option">${category.replace(/-/g, " ")}</h3>`;
         }
       });
 
@@ -51,7 +51,7 @@ export default st => {
       searchSubmit.addEventListener("click", () => {
         autoComplete.style.display = "none";
         document
-          .querySelector(`#${input.value}`)
+          .querySelector(`#${input.value.replace(/ /g, "-")}`)
           .scrollIntoView({ block: "center", behavior: "smooth" });
           input.value = ""
       });
@@ -59,7 +59,7 @@ export default st => {
       if (event.keyCode === 13) {
         autoComplete.style.display = "none";
         document
-          .querySelector(`#${input.value}`)
+          .querySelector(`#${input.value.replace(/ /g, "-")}`)
           .scrollIntoView({ block: "center", behavior: "smooth" });
           input.value = ""
       }
