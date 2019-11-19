@@ -16,6 +16,13 @@ import { capitalize } from "lodash";
 // Import firebase db
 import { db } from "./firebase";
 import { get } from "http";
+import { stat } from "fs";
+import { fetchData } from "./moviesData";
+
+console.log(state.Movies.movies);
+state.Movies.movies = fetchData;
+console.log(state.Movies.movies);
+
 
 // TODO create a firebase db fetch to retrieve imdb ids for api fetch request
 // TODO create a api fetch request to pull data for movies
@@ -39,10 +46,12 @@ function renderState(st = state.Home) {
   ${Main(st)}
   ${Footer()}
 `;
+
   router.updatePageLinks();
   if (capitalize(router.lastRouteResolved().url.slice(1)) === "Movies") {
     // console.log("1 router");
     // console.log(movies(st))
+    state.Movies.movies = fetchData;
     movies(st);
   }
 }

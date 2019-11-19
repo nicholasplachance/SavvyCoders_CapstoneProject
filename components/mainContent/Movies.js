@@ -37,8 +37,9 @@ export default ({ movies }) =>
   </div>
   </div>
 
+  <div class="backTop-div">
   <button id="toTop" type="button">Back to top!</button>
-
+  </div>
   </div>
   <div class="section-grid">${generateArticlesHTML(movies)}</div>`;
 // export default () => `<div class="hero-image">

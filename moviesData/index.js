@@ -2,27 +2,23 @@ import { db } from "../firebase";
 import axios from "axios";
 import { grabEndpoints } from "./lib";
 
+export const fetchData = grabEndpoints()
+
 export default st => {
-  let movieEndPoints = grabEndpoints();
-  st.movies = movieEndPoints;
   const titles = document.querySelectorAll("h3");
   const learnMore = document.querySelectorAll("h5");
-  const div = document.querySelector(".movies-container");
   const allMovies = document.querySelector(".section-grid");
   const input = document.querySelector("#search-bar");
   const searchSubmit = document.querySelector("#search-submit");
   const toTop = document.querySelector("#toTop");
   const autoComplete = document.querySelector(".auto-complete");
   const movieCategories = [];
-  console.log(st.movies)
-
-  if (movieEndPoints.length >= 2) {
-    console.log(st.movies);
-  }
 
   input.addEventListener("keyup", () => {
     movieCategories.length = 0;
     autoComplete.innerHTML = ``;
+
+    console.log(autoComplete);
 
     if (allMovies.innerHTML.includes(input.value) && input.value !== "") {
       st.movies.forEach(movie => {
@@ -31,45 +27,61 @@ export default st => {
 
       movieCategories.forEach(category => {
         if (category.includes(input.value)) {
-          autoComplete.innerHTML += `<h3 class="dropdown-option">${category.replace(/-/g, " ")}</h3>`;
+          autoComplete.innerHTML += `<h3 class="dropdown-option">${category.replace(
+            /-/g,
+            " "
+          )}</h3>`;
         }
       });
 
-      const dropdownOption = document.querySelector(".dropdown-option");
-      console.log(dropdownOption);
+      const dropdownOptions = document.querySelectorAll(".dropdown-option");
+      console.log(dropdownOptions);
 
-      if (dropdownOption !== null) {
-        dropdownOption.addEventListener(
-          "click",
-          () => (input.value = dropdownOption.textContent)
-        );
+      if (dropdownOptions !== null) {
+        dropdownOptions.forEach(option => {
+          option.addEventListener(
+            "click",
+            () => (input.value = option.textContent)
+          );
+        });
       }
+
+      // }
 
       autoComplete.style.display = "flex";
       // document.querySelector("#Batman").scrollIntoView()
 
       searchSubmit.addEventListener("click", () => {
         autoComplete.style.display = "none";
-        document
-          .querySelector(`#${input.value.replace(/ /g, "-")}`)
-          .scrollIntoView({ block: "center", behavior: "smooth" });
-          input.value = ""
+        let movie = document
+        .getElementById(input.value.replace(/ /g, "-"))
+
+        movie.scrollIntoView({ block: "center", behavior: "smooth" });
+        movie.style.boxShadow  =  "white 0px 0px 10px 15px";
       });
 
       if (event.keyCode === 13) {
         autoComplete.style.display = "none";
-        document
-          .querySelector(`#${input.value.replace(/ /g, "-")}`)
-          .scrollIntoView({ block: "center", behavior: "smooth" });
-          input.value = ""
+        let movie = document
+        .getElementById(input.value.replace(/ /g, "-"))
+
+        movie.scrollIntoView({ block: "center", behavior: "smooth" });
+        movie.style.boxShadow  =  "white 0px 0px 10px 15px";
       }
     }
   });
 
   toTop.addEventListener("click", () => {
+    let movie = document
+        .getElementById(input.value.replace(/ /g, "-"))
     document
       .querySelector("header")
       .scrollIntoView({ block: "start", behavior: "smooth" });
+    if ( input.value !== "" ) {
+      console.log(movie)
+      movie.style.boxShadow  =  "none";
+    }
+    input.value = "";
   });
 
   titles.forEach(link => {

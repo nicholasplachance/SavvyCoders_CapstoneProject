@@ -6,7 +6,7 @@
           "moviePublisher": "marvel",
           "movieName": "Iron Man",
           "movieId": "tt0371746",
-          "movieCategory": "Iron-Man"
+          "movieCategory": "Iron-Man-1"
         },
         {
           "moviePublisher": "marvel",
@@ -18,7 +18,7 @@
           "moviePublisher": "marvel",
           "movieName": "Iron Man 2",
           "movieId": "tt1228705",
-          "movieCategory": "Iron-Man"
+          "movieCategory": "Iron-Man-2"
         },
         {
           "moviePublisher": "marvel",
@@ -42,19 +42,19 @@
           "moviePublisher": "marvel",
           "movieName": "Iron Man 3",
           "movieId": "tt1300854",
-          "movieCategory": "Iron-Man"
+          "movieCategory": "Iron-Man-3"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Thor: The Dark World",
           "movieId": "tt1981115",
-          "movieCategory": "Thor"
+          "movieCategory": "Thor-Dark-World"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Captain America: The Winter Soldier",
           "movieId": "tt1843866",
-          "movieCategory": "Captain-America"
+          "movieCategory": "Captain-America-The-Winter-Solider"
         },
         {
           "moviePublisher": "marvel",
@@ -66,7 +66,7 @@
           "moviePublisher": "marvel",
           "movieName": "Avengers: Age of Ultron",
           "movieId": "tt2395427",
-          "movieCategory": "Avengers"
+          "movieCategory": "Avengers-Age-Of-Ultron"
         },
         {
           "moviePublisher": "marvel",
@@ -78,7 +78,7 @@
           "moviePublisher": "marvel",
           "movieName": "Captain America: Civil War",
           "movieId": "tt3498820",
-          "movieCategory":"Avengers"
+          "movieCategory":"Captain-Civil-War"
         },
         {
           "moviePublisher": "marvel",
@@ -90,7 +90,7 @@
           "moviePublisher": "marvel",
           "movieName": "Guardians of the Galaxy Vol. 2",
           "movieId": "tt3896198",
-          "movieCategory": "Guardians-of-the-Galaxy"
+          "movieCategory": "Guardians-of-the-Galaxy-2"
         },
         {
           "moviePublisher": "marvel",
@@ -102,7 +102,7 @@
           "moviePublisher": "marvel",
           "movieName": "Thor: Ragnarok",
           "movieId": "tt3501632",
-          "movieCategory": "Thor"
+          "movieCategory": "Thor-Ragnarok"
         },
         {
           "moviePublisher": "marvel",
@@ -114,13 +114,13 @@
           "moviePublisher": "marvel",
           "movieName": "Avengers: Infinity War",
           "movieId": "tt4154756",
-          "movieCategory": "Avengers"
+          "movieCategory": "Avengers-Infinity-War"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Ant-Man and the Wasp",
           "movieId": "tt5095030",
-          "movieCategory": "Ant-Man"
+          "movieCategory": "Ant-Man-And-The-Wasp"
         },
         {
           "moviePublisher": "marvel",
@@ -132,13 +132,13 @@
           "moviePublisher": "marvel",
           "movieName": "Avengers: Endgame",
           "movieId": "tt4154796",
-          "movieCategory": "Avengers"
+          "movieCategory": "Avengers-Endgame"
         },
         {
           "moviePublisher": "marvel",
           "movieName": "Spider-Man: Far from Home",
           "movieId": "tt6320628",
-          "movieCategory": "Spider-Man"
+          "movieCategory": "Spider-Man-Far-From-Home"
         },
         {
           "moviePublisher": "dc",
